@@ -1,39 +1,57 @@
 let courseUl = document.querySelector('#course-list');
+let schoolList = document.querySelector('#school-list');
 
-for (let course in courseList) {
-	/* 
-	 * !!!Spaghetti!!!
-	 *
-	 * Iterates through courses in data.js and creates the 
-	 * list of courses dynamically
-	 */
+for (let school in courseList) {
+	let schoolDiv = document.createElement('div');
+	schoolDiv.setAttribute('class', 'school');
+	schoolDiv.setAttribute('id', school);
 
-	let slot = courseList[course];
+	let schoolHeader = document.createElement('h3');
+	schoolHeader.textContent = fullName[school];
 
-	let courseLabel = document.createElement('label');
-	courseLabel.setAttribute('for', course);
-	courseLabel.textContent = course;
+	let schoolUl =  document.createElement('ul');
+	schoolList.appendChild(schoolDiv);
+	schoolDiv.appendChild(schoolHeader);
+	schoolDiv.appendChild(schoolUl);
 
-	let courseLi = document.createElement('li');
-	courseLi.setAttribute('class', 'course');
+	for (let course in courseList[school]) {
+		let slot = courseList[school][course];
 
-	let courseCheckBox = document.createElement('input');
-	courseCheckBox.setAttribute('type', 'checkbox');
-	courseCheckBox.setAttribute('value', course);
-	courseCheckBox.setAttribute('id', course);
-	courseCheckBox.setAttribute('class', slot);
+		let courseLabel = document.createElement('label');
+		courseLabel.setAttribute('for', course);
+		courseLabel.textContent = course;
 
-	courseUl.appendChild(courseLi);
-	courseLi.appendChild(courseCheckBox);
-	courseLi.appendChild(courseLabel);
+		let courseLi = document.createElement('li');
+		courseLi.setAttribute('class', 'course');
+
+		let courseCheckBox = document.createElement('input');
+		courseCheckBox.setAttribute('type', 'checkbox');
+		courseCheckBox.setAttribute('value', course);
+		courseCheckBox.setAttribute('id', course);
+		courseCheckBox.setAttribute('class', slot);
+
+		schoolUl.appendChild(courseLi);
+		courseLi.appendChild(courseCheckBox);
+		courseLi.appendChild(courseLabel);
+	}
 }
 
+let occupiedSlots = []
 function generate() {
 	let courseCheckBoxes = document.querySelectorAll('input');
 	courseCheckBoxes.forEach(function(course) {
 		if (course.checked) {
 			let courseCode = course.getAttribute('id');
 			let courseSlot = course.getAttribute('class');
+			for (let i = 0; i < occupiedSlots.length; ++i) {
+				if (occupiedSlots[i] === courseSlot) {
+					alert("Conflict detected. Call a UN peacekeeping mission.");
+					location = location;
+				}
+			}
+
+			occupiedSlots.push(courseSlot);
+
 			let courseSlotInTimetable = document.querySelectorAll('td.' + courseSlot);
 			courseSlotInTimetable.forEach(function(slotInTimetable) {
 				slotInTimetable.textContent = courseCode;
@@ -42,5 +60,10 @@ function generate() {
 	})
 }
 
-let generateButton = document.querySelector('form > button');
+let generateButton = document.querySelector('button#gen');
 generateButton.onclick = generate;
+
+let resetButton = document.querySelector('button#reset');
+resetButton.onclick = function() {
+	location = location;
+}

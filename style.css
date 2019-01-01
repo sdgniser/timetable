@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: sans-serif;
+}
+
+body {
+	margin: 0 auto;
+	width: 1024px;
+	padding: 0 1.4rem 0 1.4rem;
+}
+
+#school-list {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-gap: 0;
+}
+
+.school {
+	display: inline-block;
+}
+
+#buttons {
+	text-align: center;
+}
+
+h1,
+h2 {
+	text-align: center;
+}
+
+table {
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+	border: 2px solid;
+}
+
+th:nth-child(1) {
+	width: 8rem;
+}
+
+th,
+td {
+	padding: 0.4rem;
+	border: 1px solid;
+	text-align: center;
+}
+
+footer ul {
+	padding: 1rem 0;
+	text-align: right;
+	margin: 0;
+}
+footer li {
+	display: inline-block;
+	list-style: none;
+	padding-left: 1.4rem;
+}
