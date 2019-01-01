@@ -58,6 +58,7 @@ function generate() {
 			})
 		}
 	})
+	occupiedSlots = [];
 }
 
 let generateButton = document.querySelector('button#gen');
