@@ -46,7 +46,6 @@ function generate() {
 			for (let i = 0; i < occupiedSlots.length; ++i) {
 				if (occupiedSlots[i] === courseSlot) {
 					alert("Conflict detected. Call a UN peacekeeping mission.");
-					location = location;
 				}
 			}
 
@@ -58,6 +57,7 @@ function generate() {
 			})
 		}
 	})
+	occupiedSlots = [];
 }
 
 let generateButton = document.querySelector('button#gen');
