@@ -2,7 +2,7 @@
 <html lang="en-US">
 	<head>
 		<meta charset="utf-8">
-		<link href="/style.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
 		
 		<title>
 			Timetable Generator
@@ -12,33 +12,34 @@
 	<body>
 		<h1>Timetable Generator</h1>
 		<h2>Select your registered courses</h2>
-		<form>
-			<ul id="course-list">
-			</ul>
 
-			<button type="button">Generate Timetable!</button>
-			<button type="">Reset</button>
-		</form>
+		<div id="school-list">
+		</div>
+
+		<div id="buttons">
+			<button type="button" id="gen">Generate Timetable!</button>
+			<button id="reset">Reset</button>
+		</div>
 
 		<h2>Generated Timetable</h2>
 		<table>
 			<tr>
-				<td>Day</td>
-				<td>08:30 - 09:25</td>
-				<td>09:30 - 10:25</td>
-				<td>10:30 - 11:25</td>
-				<td>11:30 - 12:25</td>
-				<td>12:30 - 13:25</td>
-				<td>13:30 - 14:25</td>
-				<td>14:30 - 15:25</td>
-				<td>15:30 - 16:25</td>
-				<td>16:30 - 17:25</td>
-				<td>17:30 - 18:25</td>
-				<td>18:30 - 19:25</td>
+				<th scope="col">Day</th>
+				<th scope="col">08:30</th>
+				<th scope="col">09:30</th>
+				<th scope="col">10:30</th>
+				<th scope="col">11:30</th>
+				<th scope="col">12:30</th>
+				<th scope="col">13:30</th>
+				<th scope="col">14:30</th>
+				<th scope="col">15:30</th>
+				<th scope="col">16:30</th>
+				<th scope="col">17:30</th>
+				<th scope="col">18:30</th>
 			</tr>
 
 			<tr>
-				<td>Monday</td>
+				<th scope="row">Monday</th>
 				<td class="A">A</td>
 				<td class="B">B</td>
 				<td class="C">C</td>
@@ -53,7 +54,7 @@
 			</tr>
 
 			<tr>
-				<td>Tuesday</td>
+				<th scope="row">Tuesday</th>
 				<td class="F">F</td>
 				<td class="A">A</td>
 				<td class="B">B</td>
@@ -68,7 +69,7 @@
 			</tr>
 
 			<tr>
-				<td>Wednesday</td>
+				<th scope="row">Wednesday</th>
 				<td class="E">E</td>
 				<td class="F">F</td>
 				<td class="A">A</td>
@@ -83,7 +84,7 @@
 			</tr>
 
 			<tr>
-				<td>Thursday</td>
+				<th scope="row">Thursday</th>
 				<td class="D">D</td>
 				<td class="E">E</td>
 				<td class="F">F</td>
@@ -98,7 +99,7 @@
 			</tr>
 
 			<tr>
-				<td>Friday</td>
+				<th scope="row">Friday</th>
 				<td class="C">C</td>
 				<td class="D">D</td>
 				<td class="E">E</td>
@@ -108,6 +109,13 @@
 				<td class="L">L</td>
 			</tr>
 		</table>
+		<footer>
+			<ul>
+				<li><a href="https://sdgniser.github.io">NISER SDG</a></li>
+				<li><a href="">Source Code</a></li>
+				<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Totally not a rickroll</a></li>
+			</ul>
+		</footer>
 
 		<script src="data.js"></script>
 		<script src="main.js"></script>
