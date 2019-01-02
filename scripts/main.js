@@ -72,6 +72,7 @@ function generatePdf() {
 
 	let timetable = document.querySelector('table');
 	let jsonTable = doc.autoTableHtmlToJson(timetable);
+	doc.text('Timetable for Even Semester 2019', 36, 25);
 	doc.autoTable(jsonTable.columns, jsonTable.data, {
 		styles: {cellPadding: 10,
 				 fontSize: 14,
