@@ -65,10 +65,20 @@ function generate() {
 }
 
 function generatePdf() {
-	let doc = new jsPDF('p', 'pt');
+	let doc = new jsPDF({
+		orientation: 'landscape',
+		unit: 'pt'
+	})
+
 	let timetable = document.querySelector('table');
 	let jsonTable = doc.autoTableHtmlToJson(timetable);
-	doc.autoTable(jsonTable.columns, jsonTable.data);
+	doc.autoTable(jsonTable.columns, jsonTable.data, {
+		styles: {cellPadding: 10,
+				 fontSize: 14,
+				 halign: 'center',
+				 valign: 'middle'},
+		theme: 'grid'});
+		
 	doc.save("tt.pdf");
 }
 
