@@ -64,8 +64,19 @@ function generate() {
 	occupiedSlots = [];
 }
 
+function generatePdf() {
+	let doc = new jsPDF('p', 'pt');
+	let timetable = document.querySelector('table');
+	let jsonTable = doc.autoTableHtmlToJson(timetable);
+	doc.autoTable(jsonTable.columns, jsonTable.data);
+	doc.save("tt.pdf");
+}
+
 let generateButton = document.querySelector('button#gen');
 generateButton.onclick = generate;
+
+let pdfButton = document.querySelector('button#pdf');
+pdfButton.onclick = generatePdf;
 
 let resetButton = document.querySelector('button#reset');
 resetButton.onclick = function() {

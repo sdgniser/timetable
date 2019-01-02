@@ -28,6 +28,10 @@ body {
 	text-align: center;
 }
 
+#pdf {
+	margin-top: 1rem;
+}
+
 h1,
 h2 {
 	text-align: center;
