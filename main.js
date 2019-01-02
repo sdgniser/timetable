@@ -15,11 +15,14 @@ for (let school in courseList) {
 	schoolDiv.appendChild(schoolUl);
 
 	for (let course in courseList[school]) {
-		let slot = courseList[school][course];
+		let slot = courseList[school][course].slot;
 
 		let courseLabel = document.createElement('label');
 		courseLabel.setAttribute('for', course);
 		courseLabel.textContent = course;
+		if (courseList[school][course].hasOwnProperty('name')) {
+			courseLabel.textContent += ": " + courseList[school][course].name;
+		}
 
 		let courseLi = document.createElement('li');
 		courseLi.setAttribute('class', 'course');
@@ -36,16 +39,17 @@ for (let school in courseList) {
 	}
 }
 
-let occupiedSlots = []
 function generate() {
 	let courseCheckBoxes = document.querySelectorAll('input');
+	let occupiedSlots = []
 	courseCheckBoxes.forEach(function(course) {
 		if (course.checked) {
 			let courseCode = course.getAttribute('id');
 			let courseSlot = course.getAttribute('class');
 			for (let i = 0; i < occupiedSlots.length; ++i) {
 				if (occupiedSlots[i] === courseSlot) {
-					alert("Conflict detected. Call a UN peacekeeping mission.");
+					alert("Conflict detected. Call a UN peacekeeping mission or try selecting your courses again.");
+					location = location;
 				}
 			}
 

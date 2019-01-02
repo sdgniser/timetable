@@ -1,75 +1,259 @@
 let courseList = {
 	"sbs": {
-		"B204": "D",
-		"B205": "E",
-		"B352": "B",
-		"B304": "A",
-		"B305": "D",
-		"B306": "E",
-		"B359": "B",
-		"B403": "E",
-		"B404": "F",
-		"B453": "A",
-		"B454": "A",
-		"B457": "D",
-		"B554": "B",
-		"B556": "E"
+		"B204": {
+			"slot": "D",
+			"name": "Cell Biology"
+		},
+
+		"B205": {
+			"slot": "E",
+			"name": "Genetics",
+		},
+
+		"B352": {
+			"slot": "B",
+			"name": "Endocrinology",
+		},
+
+		"B304": {
+			"slot": "A",
+		},
+
+		"B305": {
+			"slot": "D",
+		},
+
+		"B306": {
+			"slot": "E",
+		},
+
+		"B359": {
+			"slot": "B",
+		},
+
+		"B403": {
+			"slot": "E",
+		},
+
+		"B404": {
+			"slot": "F",
+		},
+
+		"B453": {
+			"slot": "A",
+		},
+
+		"B454": {
+			"slot": "A",
+		},
+
+		"B457": {
+			"slot": "D",
+		},
+
+		"B554": {
+			"slot": "B",
+		},
+
+		"B556": {
+			"slot": "E",
+		},
 	},
 	
 	"sps": {
-		"P204": "C",
-		"P205": "B",
-		"P206": "D",
-		"P301": "B",
-		"P305": "F",
-		"P306": "C",
-		"P452": "C",
-		"P457": "D",
-		"P461": "D",
-		"P464": "F",
-		"P468": "E",
-		"P473": "B",
-		"P477": "E"
+		"P204": {
+			"slot": "C",
+			"name": "Electromagnetism I",
+			"classroom": "P126",
+		},
+
+		"P205": {
+			"slot": "B",
+			"name": "Mathematical Methods II",
+			"classroom": "P126"
+		},
+
+		"P206": {
+			"slot": "D",
+			"name": "Quantum Mechanics I",
+			"classroom": "P126"
+		},
+
+		"P301": {
+			"slot": "B",
+		},
+
+		"P305": {
+			"slot": "F",
+		},
+
+		"P306": {
+			"slot": "C",
+		},
+
+		"P452": {
+			"slot": "C",
+		},
+
+		"P457": {
+			"slot": "D",
+		},
+
+		"P461": {
+			"slot": "D",
+		},
+
+		"P464": {
+			"slot": "F",
+		},
+
+		"P468": {
+			"slot": "E",
+		},
+
+		"P473": {
+			"slot": "B",
+		},
+
+		"P477": {
+			"slot": "E"
+		},
+
 	},
 
 	"sms": {
-		"M204": "A",
-		"M205": "F",
-		"M206": "E",
-		"M208": "B",
-		"M301": "C",
-		"M307": "A",
-		"M308": "H",
-		"M310": "G",
-		"M311": "I",
-		"M402": "B",
-		"M455": "C",
-		"M556": "C",
-		"M458": "A"
+		"M204": {
+			"slot": "A",
+			"name": "Metric Spaces",
+		},
+
+		"M205": {
+			"slot": "F",
+			"name": "Linear Algebra",
+		},
+
+		"M206": {
+			"slot": "E",
+			"name": "Probability Theory",
+		},
+
+		"M208": {
+			"slot": "B",
+			"name": "Graph Theory",
+		},
+
+		"M301": {
+			"slot": "C",
+		},
+
+		"M307": {
+			"slot": "A",
+		},
+
+		"M308": {
+			"slot": "H",
+		},
+
+		"M310": {
+			"slot": "G",
+		},
+
+		"M311": {
+			"slot": "I",
+		},
+
+		"M402": {
+			"slot": "B",
+		},
+
+		"M455": {
+			"slot": "C",
+		},
+
+		"M556": {
+			"slot": "C",
+		},
+
+		"M458": {
+			"slot": "A"
+		},
+
 	},
 
 	"scs": {
-		"C204": "C",
-		"C205": "A",
-		"C206": "F",
-		"C304": "C",
-		"C305": "F",
-		"C306": "A",
-		"C402": "C",
-		"C556": "E",
-		"C565": "F",
-		"C562": "D"
+		"C204": {
+			"slot": "C",
+			"name": "Reagents in Organic Synthesis",
+		},
+
+		"C205": {
+			"slot": "A",
+			"name": "Main Group and Organometallic Chemistry",
+		},
+
+		"C206": {
+			"slot": "F",
+			"name": "Organic Synthesis I",
+		},
+
+		"C304": {
+			"slot": "C",
+		},
+
+		"C305": {
+			"slot": "F",
+		},
+
+		"C306": {
+			"slot": "A",
+		},
+
+		"C402": {
+			"slot": "C",
+		},
+
+		"C556": {
+			"slot": "E",
+		},
+
+		"C565": {
+			"slot": "F",
+		},
+
+		"C562": {
+			"slot": "D"
+		},
+
 	},
 
 	"scss": {
-		"CS202": "Z",
-		"CS452": "Z"
+		"CS202": {
+			"slot": "Z",
+			"name": "Discrete Structures in Computation",
+		},
+
+		"CS452": {
+			"slot": "Z",
+			"name": "Algorithmic Coding Theory",
+		},
+
 	},
 
 	"shss": {
-		"H227": "K",
-		"H205": "J",
-		"H237": "L"
+		"H227": {
+			"slot": "K",
+			"name": "Organizational Behaviour",
+		},
+
+		"H205": {
+			"slot": "J",
+			"name": "Environmental Economics and Environmental Impact Assessment",
+		},
+
+		"H237": {
+			"slot": "L",
+			"name": "Science Communication and the Citizenship",
+		},
 	}
 }
 
@@ -79,5 +263,5 @@ let fullName = {
 	"sms": "School of Mathematical Sciences",
 	"scs": "School of Chemical Sciences",
 	"scss": "School of Computer Sciences",
-	"shss": "School of Humanities and Social Sciences"
+	"shss": "School of Humanities and Social Sciences",
 }
