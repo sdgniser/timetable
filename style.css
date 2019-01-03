@@ -10,7 +10,8 @@ html {
 
 body {
 	margin: 0 auto;
-	width: 1024px;
+	max-width: 1024px;
+	min-width: 800px;
 	padding: 0 1.4rem 0 1.4rem;
 }
 
@@ -65,3 +66,10 @@ footer li {
 	list-style: none;
 	padding-left: 1.4rem;
 }
+
+@media (max-width: 800px) {
+	#school-list {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
