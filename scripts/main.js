@@ -79,7 +79,9 @@ function generatePdf() {
 				 halign: 'center',
 				 valign: 'middle'},
 		theme: 'grid'});
-		
+
+	doc.text('List of courses', 36, 290);
+	doc.fromHTML(schoolList, 36, 290);
 	doc.save("tt.pdf");
 }
 
