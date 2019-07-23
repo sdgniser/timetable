@@ -48,7 +48,7 @@ function generate() {
 			let courseSlot = course.getAttribute('class');
 			for (let i = 0; i < occupiedSlots.length; ++i) {
 				if (occupiedSlots[i] === courseSlot) {
-					alert("Conflict detected. Call a UN peacekeeping mission or try selecting your courses again.");
+					alert("Conflict detected. Try selecting your courses again.");
 					location = location;
 				}
 			}
