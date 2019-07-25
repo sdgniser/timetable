@@ -39,6 +39,14 @@ for (let school in courseList) {
 	}
 }
 
+function clean() {
+	let slotsInTimetable = document.querySelectorAll('td:not(.lunch)');
+
+	slotsInTimetable.forEach(function(slot) {
+		slot.textContent = '';
+	})
+}
+
 function generate() {
 	let courseCheckBoxes = document.querySelectorAll('input');
 	let occupiedSlots = []
@@ -87,7 +95,10 @@ function generatePdf() {
 }
 
 let generateButton = document.querySelector('button#gen');
-generateButton.onclick = generate;
+generateButton.addEventListener('click', generate);
+
+let cleanButton = document.querySelector('button#clean');
+cleanButton.addEventListener('click', clean);
 
 let pdfButton = document.querySelector('button#pdf');
 pdfButton.onclick = generatePdf;
