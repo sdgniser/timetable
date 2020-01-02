@@ -2,130 +2,147 @@
 <html lang="en-US">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="style.css" rel="stylesheet">
-		
-		<title>
-			Timetable Generator
-		</title>
+		<meta name="viewport" content="width=device-width, height=device-height,initial-scale=1">
+
+		<link href="css/foundation.css" rel="stylesheet">
+		<link href="css/app.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+
+		<title>Timetable Generator</title>
 	</head>
 
 	<body>
-		<h1>Timetable Generator</h1>
-		<h2>Select your registered courses</h2>
+		<div class="grid-container hide-when-gen">
+			<div class="grid-x grid-padding-x"><div class="large-12 cell"><h1>Timetable Generator</h1></div></div>
+			<h2 class='subheader'>Select your courses</h2>
 
-		<div id="school-list">
+			<button class="tablink" onclick="openPage('sps')" id="defaultOpen">SPS</button>
+			<button class="tablink" onclick="openPage('sbs')">SBS</button>
+			<button class="tablink" onclick="openPage('scs')">SCS</button>
+			<button class="tablink" onclick="openPage('sms')">SMS</button>
+			<button class="tablink" onclick="openPage('scss')">SCSS</button>
+
+			<div id="school-list">
+			</div>
 		</div>
 
-		<div id="buttons">
-      <button type="button" id="clean">Clean Timetable!</button>
-			<button type="button" id="gen">Generate Timetable!</button>
-			<button id="reset">Reset</button>
+		<div class="row text-center">
+			<button id="gen" class="button hide-when-gen"><i class="fa fa-cog" aria-hidden="true"></i>  Generate!</button>
+			<button id="reset" class="button warning"><i class="fa fa-refresh" aria-hidden="true"></i>  Reset</button>
+			<button id="pdf" class="button success show-when-gen" style="display: none"> <i class="fa fa-arrow-down" aria-hidden="true"></i> PDF</button>
+		</div>
+		<div class="small-rot-90">
+			<table role="grid" class="show-when-gen" style="display: none;">
+				<tr>
+					<th scope="col">Day</th>
+					<th scope="col">08:30</th>
+					<th scope="col">09:30</th>
+					<th scope="col">10:30</th>
+					<th scope="col">11:30</th>
+					<th scope="col">12:30</th>
+					<th scope="col">13:30</th>
+					<th scope="col">14:30</th>
+					<th scope="col">15:30</th>
+					<th scope="col">16:30</th>
+					<th scope="col">17:30</th>
+					<th scope="col">18:30</th>
+				</tr>
+
+				<tr>
+					<th scope="row">Monday</th>
+					<td class="A">A</td>
+					<td class="B">B</td>
+					<td class="C">C</td>
+					<td class="">No Class</td>
+					<td class="lunch">Lunch Break</td>
+					<td class="D">D</td>
+					<td class="G">G</td>
+					<td class="H">H</td>
+					<td class="I">I</td>
+					<td class="J">J</td>
+					<td class="K">K</td>
+				</tr>
+
+				<tr>
+					<th scope="row">Tuesday</th>
+					<td class="E">E</td>
+					<td class="F">F</td>
+					<td class="A">A</td>
+					<td class="B">B</td>
+					<td class="lunch">Lunch Break</td>
+					<td class="C">C</td>
+					<td class="H">H</td>
+					<td class="I">I</td>
+					<td class="G">G</td>
+					<td class="J">J</td>
+					<td class="K">K</td>
+				</tr>
+
+				<tr>
+					<th scope="row">Wednesday</th>
+					<td class="D">D</td>
+					<td class="E">E</td>
+					<td class="F">F</td>
+					<td class="A">A</td>
+					<td class="lunch">Lunch Break</td>
+					<td class="B">B</td>
+					<td class="I">I</td>
+					<td class="G">G</td>
+					<td class="H">H</td>
+					<td class="J">J</td>
+					<td class="K">K</td>
+				</tr>
+
+				<tr>
+					<th scope="row">Thursday</th>
+					<td class="C">C</td>
+					<td class="D">D</td>
+					<td class="E">E</td>
+					<td class="">No Class</td>
+					<td class="lunch">Lunch Break</td>
+					<td class="F">F</td>
+					<td class="G">G</td>
+					<td class="H">H</td>
+					<td class="I">I</td>
+					<td class="J">J</td>
+					<td class="K">K</td>
+				</tr>
+
+				<tr>
+					<th scope="row">Friday</th>
+					<td class="B">B</td>
+					<td class="A">A</td>
+					<td class="D">D</td>
+					<td class="C">C</td>
+					<td class="lunch">Lunch Break</td>
+					<td class="E">E</td>
+					<td class="F">F</td>
+				</tr>
+			</table>
+		</div>
+		<div class="social-overlap process-scetion mt100 hide-when-gen">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-10">
+						<div class="social-bar">
+							<div class="social-icons mb-3 iconpad text-center">
+								<a href="https://sdgniser.github.io" target="_blank" class="slider-nav-item"><i class="fa fa-github"></i></a>
+								<a href="https://www.github.com/sdgniser/timetable" target="_blank" class="slider-nav-item"><i class="fa fa-file-code-o"></i></a>
+								<a href="code@niser.ac.in" target="_blank" class="slider-nav-item"><i class="fa fa-envelope-o"></i></a>
+								<a href="https://github.com/sdgniser/timetable/issues" target="_blank" class="slider-nav-item"><i class="fa fa-bug"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<h2>Generated Timetable</h2>
-		<table>
-			<tr>
-				<th scope="col">Day</th>
-				<th scope="col">08:30</th>
-				<th scope="col">09:30</th>
-				<th scope="col">10:30</th>
-				<th scope="col">11:30</th>
-				<th scope="col">12:30</th>
-				<th scope="col">13:30</th>
-				<th scope="col">14:30</th>
-				<th scope="col">15:30</th>
-				<th scope="col">16:30</th>
-				<th scope="col">17:30</th>
-				<th scope="col">18:30</th>
-			</tr>
-
-			<tr>
-				<th scope="row">Monday</th>
-				<td class="A">A</td>
-				<td class="B">B</td>
-				<td class="C">C</td>
-				<td class="">No Class</td>
-				<td class="lunch">Lunch Break</td>
-				<td class="D">D</td>
-				<td class="G">G</td>
-				<td class="H">H</td>
-				<td class="I">I</td>
-				<td class="J">J</td>
-				<td class="K">K</td>
-			</tr>
-
-			<tr>
-				<th scope="row">Tuesday</th>
-				<td class="E">E</td>
-				<td class="F">F</td>
-				<td class="A">A</td>
-				<td class="B">B</td>
-				<td class="lunch">Lunch Break</td>
-				<td class="C">C</td>
-				<td class="H">H</td>
-				<td class="I">I</td>
-				<td class="G">G</td>
-				<td class="J">J</td>
-				<td class="K">K</td>
-			</tr>
-
-			<tr>
-				<th scope="row">Wednesday</th>
-				<td class="D">D</td>
-				<td class="E">E</td>
-				<td class="F">F</td>
-				<td class="A">A</td>
-				<td class="lunch">Lunch Break</td>
-				<td class="B">B</td>
-				<td class="I">I</td>
-				<td class="G">G</td>
-				<td class="H">H</td>
-				<td class="J">J</td>
-				<td class="K">K</td>
-			</tr>
-
-			<tr>
-				<th scope="row">Thursday</th>
-				<td class="C">C</td>
-				<td class="D">D</td>
-				<td class="E">E</td>
-				<td class="">No Class</td>
-				<td class="lunch">Lunch Break</td>
-				<td class="F">F</td>
-				<td class="G">G</td>
-				<td class="H">H</td>
-				<td class="I">I</td>
-				<td class="J">J</td>
-				<td class="K">K</td>
-			</tr>
-
-			<tr>
-				<th scope="row">Friday</th>
-				<td class="B">B</td>
-				<td class="A">A</td>
-				<td class="D">D</td>
-				<td class="C">C</td>
-				<td class="lunch">Lunch Break</td>
-				<td class="E">E</td>
-				<td class="F">F</td>
-			</tr>
-		</table>
-		<div id="buttons">
-			<button type="button" id="pdf">Download PDF</button>
-		</div>
-		<footer>
-			<ul>
-				<li><a href="https://sdgniser.github.io">NISER SDG</a></li>
-				<li><a href="https://www.github.com/sdgniser/timetable">Source Code</a></li>
-				<li>Report errors on <a href="https://github.com/sdgniser/timetable/issues">Github</a> or <abbr
-                                  title="code@niser.ac.in">write to us</abbr>.</li>
-			</ul>
-		</footer>
-
-		<script src="scripts/jspdf.min.js"></script>
-		<script src="scripts/jspdf.plugin.autotable.js"></script>
-		<script src="scripts/data_odd.js"></script>
-		<script src="scripts/main.js"></script>
+		<script src="js/vendor/foundation.js"></script>
+		<script src="js/vendor/jquery.js"></script>
+		<script src="js/jspdf.min.js"></script>
+		<script src="js/jspdf.plugin.autotable.js"></script>
+		<script src="js/data_odd.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/app.js"></script>
 	</body>
 </html>
