@@ -4,8 +4,9 @@ function School(code, name, courses) {
 	this.courses = courses;
 }
 
-function Course(name, slot) {
+function Course(name, nick, slot) {
 	this.name = name;
+	this.nick = nick;
 	this.slot = slot;
 }
 
@@ -18,26 +19,26 @@ let schools = {
 };
 
 let courses = {
-	'B204': new Course('Cell Biology', 'T2'),
-	'B205': new Course('Genetics', 'T1'),
-	'B355': new Course('Structural Biology', 'T6'),
+	'B204': new Course('Cell Biology', 'C Bio', 'T2'),
+	'B205': new Course('Genetics', 'Gene', 'T1'),
+	'B355': new Course('Structural Biology', 'S Bio', 'T6'),
 
-	'C204': new Course('Reagents in Organic Synthesis', 'T6'),
-	'C205': new Course('Main Group and Organometallic Chemistry', 'T3'),
-	'C206': new Course('Quantum Chemistry I', 'T4'),
+	'C204': new Course('Reagents in Organic Synthesis', 'ROS', 'T6'),
+	'C205': new Course('Main Group and Organometallic Chemistry', 'MGOC', 'T3'),
+	'C206': new Course('Quantum Chemistry I', 'QC I', 'T4'),
 
-	'CS202': new Course('Discrete Structures and Computation', 'T7'),
-	'CS452': new Course('Algorithmic Coding Theory', 'T3'),
-	'CS456': new Course('Computational Geometry', 'T5'),
+	'CS202': new Course('Discrete Structures and Computation', 'DSC', 'T7'),
+	'CS452': new Course('Algorithmic Coding Theory', 'ACT', 'T3'),
+	'CS456': new Course('Computational Geometry', 'CG', 'T5'),
 
-	'M204': new Course('Metric Spaces', 'T1'),
-	'M205': new Course('Linear Algebra', 'T4'),
-	'M206': new Course('Probability Theory', 'T2'),
-	'M208': new Course('Graph Theory', 'T3'),
+	'M204': new Course('Metric Spaces', 'Metric', 'T1'),
+	'M205': new Course('Linear Algebra', 'Lin Alg', 'T4'),
+	'M206': new Course('Probability Theory', 'Prob', 'T2'),
+	'M208': new Course('Graph Theory', 'Graph', 'T3'),
 
-	'P204': new Course('Electromagnetism I', 'T3'),
-	'P205': new Course('Mathematical Methods II', 'T6'),
-	'P206': new Course('Quantum Mechanics I', 'T5'),
+	'P204': new Course('Electromagnetism I', 'EM I', 'T3'),
+	'P205': new Course('Mathematical Methods II', 'MM II', 'T6'),
+	'P206': new Course('Quantum Mechanics I', 'QM I', 'T5'),
 };
 
 for (let course in courses) {

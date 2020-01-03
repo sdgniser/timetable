@@ -50,14 +50,13 @@ function clean() {
 
 /* Replaces the slots in the timetable with the selected
  * course in that slot */
-function generate() {
+function generate(nick) {
 	let courseCheckBoxes = document.querySelectorAll('input');
 	let occupiedSlots = []
 	courseCheckBoxes.forEach(function(course) {
 		if (course.checked) {
 			let courseCode = course.getAttribute('id');
 			let courseSlot = courses[courseCode].slot;
-			console.log(courseCode, courseSlot);
 			for (let i = 0; i < occupiedSlots.length; ++i) {
 				if (occupiedSlots[i] === courseSlot) {
 					alert("Schedule conflict detected. Course selection may need a modification.");
@@ -69,11 +68,23 @@ function generate() {
 
 			let courseSlotInTimetable = document.querySelectorAll('td.' + courseSlot);
 			courseSlotInTimetable.forEach(function(slotInTimetable) {
-				slotInTimetable.textContent = courseCode;
+				if (nick == true) {
+					slotInTimetable.textContent = courses[courseCode].nick;
+				} else {
+					slotInTimetable.textContent = courseCode;
+				}
 			})
 		}
 	})
 	occupiedSlots = [];
+}
+
+function gen_code() {
+	generate(false);
+}
+
+function gen_nick() {
+	generate(true);
 }
 
 function generatePdf() {
@@ -98,8 +109,11 @@ function generatePdf() {
 	doc.save("tt_fall_2019.pdf");
 }
 
-let generateButton = document.querySelector('button#gen');
-generateButton.addEventListener('click', generate);
+let generateCodeButton = document.querySelector('button#gen-code');
+generateCodeButton.addEventListener('click', gen_code);
+
+let generateNickButton = document.querySelector('button#gen-nick');
+generateNickButton.addEventListener('click', gen_nick);
 
 let cleanButton = document.querySelector('button#clean');
 cleanButton.addEventListener('click', clean);
