@@ -66,6 +66,7 @@ function generate(nick) {
 
 			occupiedSlots.push(courseSlot);
 
+			clean();
 			let courseSlotInTimetable = document.querySelectorAll('td.' + courseSlot);
 			courseSlotInTimetable.forEach(function(slotInTimetable) {
 				if (nick == true) {
@@ -114,9 +115,6 @@ generateCodeButton.addEventListener('click', gen_code);
 
 let generateNickButton = document.querySelector('button#gen-nick');
 generateNickButton.addEventListener('click', gen_nick);
-
-let cleanButton = document.querySelector('button#clean');
-cleanButton.addEventListener('click', clean);
 
 let pdfButton = document.querySelector('button#pdf');
 pdfButton.onclick = generatePdf;
