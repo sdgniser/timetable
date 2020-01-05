@@ -97,7 +97,7 @@ function generatePdf() {
 
 	let timetable = document.querySelector('table');
 	let jsonTable = doc.autoTableHtmlToJson(timetable);
-	doc.text('Timetable for Spring Semester 2019', 300, 25);
+	doc.text('Timetable for Spring Semester 2020', 300, 25);
 	doc.autoTable(jsonTable.columns, jsonTable.data, {
 		styles: {cellPadding: 10,
 				 fontSize: 12,
@@ -108,7 +108,7 @@ function generatePdf() {
 				 valign: 'middle'},
 		theme: 'plain'});
 
-	doc.save("tt_spring_2019.pdf");
+	doc.save("tt_spring_2020.pdf");
 }
 
 let generateCodeButton = document.querySelector('button#gen-code');
