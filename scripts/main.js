@@ -51,6 +51,8 @@ function clean() {
 /* Replaces the slots in the timetable with the selected
  * course in that slot */
 function generate(nick) {
+	clean();
+
 	let courseCheckBoxes = document.querySelectorAll('input');
 	let occupiedSlots = []
 	courseCheckBoxes.forEach(function(course) {
@@ -66,7 +68,6 @@ function generate(nick) {
 
 			occupiedSlots.push(courseSlot);
 
-			clean();
 			let courseSlotInTimetable = document.querySelectorAll('td.' + courseSlot);
 			courseSlotInTimetable.forEach(function(slotInTimetable) {
 				if (nick == true) {
