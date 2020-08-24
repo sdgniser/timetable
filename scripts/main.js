@@ -1,11 +1,23 @@
 let courseUl = document.querySelector('#course-list');
+let schoolTabs = document.querySelector('#school-tabs');
 let schoolList = document.querySelector('#school-list');
 
 /* Generating the DOM tree containing the schools
  * and the list of courses */
 for (let school in schools) {
+	let schoolTab = document.createElement('button');
+	schoolTab.textContent = school;
+	schoolTab.addEventListener('click', function() { 
+		document.querySelectorAll('.school').forEach(function(b) { b.classList.add('hidden') });
+		let schoolCourses = document.querySelector('#' + school);
+		schoolCourses.classList.remove('hidden');
+		schoolCourses.classList.add('visible');
+	});
+	schoolTabs.appendChild(schoolTab);
+
 	let schoolDiv = document.createElement('div');
-	schoolDiv.setAttribute('class', 'school');
+	schoolDiv.classList.add('school');
+	school !== 'SBS' ? schoolDiv.classList.add('hidden') : null;
 	schoolDiv.setAttribute('id', school);
 
 	let schoolHeader = document.createElement('h3');
@@ -16,7 +28,6 @@ for (let school in schools) {
 	schoolDiv.appendChild(schoolHeader);
 	schoolDiv.appendChild(schoolUl);
 
-
 	schools[school].courses.forEach(function(course) {
 		let slot = courses[course].slot;
 
@@ -26,7 +37,7 @@ for (let school in schools) {
 		courseLabel.textContent += ": " + courses[course].name;
 
 		let courseLi = document.createElement('li');
-		courseLi.setAttribute('class', 'course');
+		courseLi.classList.add('course');
 
 		let courseCheckBox = document.createElement('input');
 		courseCheckBox.setAttribute('type', 'checkbox');

@@ -25,7 +25,15 @@ body {
 	display: inline-block;
 }
 
-#buttons {
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: visible;
+}
+
+.buttons {
 	text-align: center;
 }
 
