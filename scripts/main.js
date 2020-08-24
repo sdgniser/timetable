@@ -88,14 +88,6 @@ function generate(nick) {
 	occupiedSlots = [];
 }
 
-function gen_code() {
-	generate(false);
-}
-
-function gen_nick() {
-	generate(true);
-}
-
 function generatePdf() {
 	let doc = new jsPDF({
 		orientation: 'landscape',
@@ -104,7 +96,7 @@ function generatePdf() {
 
 	let timetable = document.querySelector('table');
 	let jsonTable = doc.autoTableHtmlToJson(timetable);
-	doc.text('Timetable for Spring Semester 2020', 300, 25);
+	doc.text('Timetable for ' + semester + ' Semester ' + year, 300, 25);
 	doc.autoTable(jsonTable.columns, jsonTable.data, {
 		styles: {cellPadding: 10,
 				 fontSize: 12,
@@ -115,14 +107,14 @@ function generatePdf() {
 				 valign: 'middle'},
 		theme: 'plain'});
 
-	doc.save("tt_spring_2020.pdf");
+	doc.save(semester + year + '.pdf');
 }
 
 let generateCodeButton = document.querySelector('button#gen-code');
-generateCodeButton.addEventListener('click', gen_code);
+generateCodeButton.addEventListener('click', function() { generate(false) });
 
 let generateNickButton = document.querySelector('button#gen-nick');
-generateNickButton.addEventListener('click', gen_nick);
+generateNickButton.addEventListener('click', function() { generate(true) });
 
 let pdfButton = document.querySelector('button#pdf');
 pdfButton.onclick = generatePdf;

@@ -1,3 +1,6 @@
+let year = '2020';
+let semester = 'Fall';
+
 function School(code, name, courses) {
 	this.code = code;
 	this.name = name;
