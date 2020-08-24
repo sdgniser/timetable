@@ -70,11 +70,7 @@ function generate(nick) {
 
 			let courseSlotInTimetable = document.querySelectorAll('td.' + courseSlot);
 			courseSlotInTimetable.forEach(function(slotInTimetable) {
-				if (nick == true) {
-					slotInTimetable.textContent = courses[courseCode].nick;
-				} else {
-					slotInTimetable.textContent = courseCode;
-				}
+				slotInTimetable.textContent = nick ? courses[courseCode].nick : courseCode;
 			})
 		}
 	})
