@@ -7,6 +7,10 @@ function School(code, name, courses) {
 	this.courses = courses;
 }
 
+function short_name(school) {
+	return school.name.split(' ').slice(2).join(' ')
+}
+
 function Course(name, nick, slot) {
 	this.name = name;
 	this.nick = nick;
@@ -24,82 +28,82 @@ let schools = {
 let courses = {
 
 	/* Biology */
-	'B204': new Course('Cell Biology', 'C Bio', 'T2'),
-	'B205': new Course('Genetics', 'Gene', 'T1'),
-
-	'B355': new Course('Structural Biology', 'S Bio', 'T6'),
-	'B304': new Course('Molecular Biology', 'M Bio', 'T1'),
-	'B305': new Course('Immunology', 'Immuno', 'T8'),
-	'B306': new Course('Evolutionary Biology', 'E Bio', 'T2'),
-	'B353': new Course('Plant Developmental Biology', 'PD Bio', 'T7'),
-
-	'B453': new Course('Advanced Biochemistry', 'ABC', 'T4'),
-	'B455': new Course('Enzymology', 'Enzyme', 'T5'),
-	'B403': new Course('Bioinformatics and Compuatational Biology', 'BCB', 'T1'),
-	'B404': new Course('Evolutionary Biology', 'E Bio', 'T2'),
-
-	'B554': new Course('Cancer Biology', 'Cancer', 'T6'),
-	'B558': new Course('Quantitative Biology', 'Quant', 'T7'),
-	'B556': new Course('Immune Regulation and Infection Immunity', 'Immune', 'T8'),
+	'B201': new Course('Microbiology', 'μBio', 'B'),
+	'B202': new Course('Biochemistry', 'BChem', 'E'),
+	'B203': new Course('Biophysics & Biostatistics', 'BPhy', 'G'),
+	'B301': new Course('Physiology I (Animal)', 'APhys', 'A'),
+	'B302': new Course('Physiology II (Plant)', 'PPhys', 'B'),
+	'B303': new Course('Ecology', 'Eco', 'C'),
+	'B354': new Course('Neurobiology', 'Neuro', 'I'),
+	'B402': new Course('Developmental Biology', 'Dev Bio', 'C'),
+	'B403': new Course('Bioinformatics', 'BInfo', 'D'),
+	'B451': new Course('Advanced Cell Biology', 'ACell', 'E'),
+	'B452': new Course('Genetic Engineering', 'Genetic', 'L'),
+	'B460': new Course('Virology', 'Viro', 'F'),
+	'B551': new Course('Advanced Molecular Biology', 'AMol', 'I'),
+	'B552': new Course('Advanced Immunology', 'AImmuno', 'K'),
+	
+	'B601': new Course('Bioinformatics and Computational Biology', 'BInfo', 'D'),
+	'B602': new Course('Biotechniques', 'BTech', 'L'),
 
 	/* Chemistry */
-	'C204': new Course('Reagents in Organic Synthesis', 'ROS', 'T6'),
-	'C205': new Course('Main Group and Organometallic Chemistry', 'MGOC', 'T3'),
-	'C206': new Course('Quantum Chemistry I', 'QC I', 'T4'),
-
-	'C304': new Course('Coordination Chemistry', 'Coord', 'T6'),
-	'C305': new Course('Chemical Binding', 'Bind', 'T4'),
-	'C306': new Course('Physical Methods in Chemistry I', 'PMC I', 'T3'),
-	
-	'C402': new Course('Chemical Rate Processes', 'CRP', 'T7'),
-	
-	'C555': new Course('Principles of Drug Action', 'PDA', 'L2'),
-	'C562': new Course('Polymer Chemistry', 'Poly C', 'L1'),
-	'C565': new Course('Advanced Organic Chemistry', 'AOC', 'L2'),
-	'C568': new Course('Advanced Fluorescence Spectroscopy', 'AFS', 'L3'),
+	'C201': new Course('Basic Inorganic Chemistry', 'IChem', 'K'),
+	'C207': new Course('Mathematical Methods for Chemists', 'MMChem', 'G'),
+	'C203': new Course('Reaction Mechanisms in Organic Chemistry', 'OChem', 'H'),
+	'C301': new Course('Physical Organic Chemistry', 'POChem', 'D'),
+	'C302': new Course('Molecular Spectroscopy and Group Theory', 'Spectre', 'B'),
+	'C307': new Course('Thermodynamics and Electrochemistry', 'Thermo', 'H'),
+	'C401': new Course('Physical Methods in Chemistry II', 'PChem II', 'G'),
+	'C403': new Course('Chemistry of Heterocycles and Natural Products', 'Hetero', 'B'),
+	'C563': new Course('Molecular Reaction Dynamics', 'RDyn', 'C'),
+	'C566': new Course('Catalysis: Reaction Mechanisms and Applications', 'Catalysis', 'C'),
+	'C572': new Course('Frontiers in Organic Chemistry', 'FOChem', 'D'),
+	'C567': new Course('Advanced Main Group Chemistry', 'AdvMG', 'L'),
 
 	/* Computer Science */
-	'CS202': new Course('Discrete Structures and Computation', 'DSC', 'T7'),
-	'CS452': new Course('Algorithmic Coding Theory', 'ACT', 'T3'),
-	'CS456': new Course('Computational Geometry', 'CG', 'T5'),
+	'CS201': new Course('Theory of Computation', 'ThComp', 'L'),
+	'CS301': new Course('Design and Analysis of Algorithms', 'Algo', 'K'),
+	'CS454': new Course('Linear Programming and Combinatorial Optimization', 'Optim', 'K'),
+	'CS460': new Course('Machine Learning', 'ML', 'J'),
 
 	/* Mathematics */
-	'M204': new Course('Metric Spaces', 'Metric', 'T1'),
-	'M205': new Course('Linear Algebra', 'Lin Alg', 'T4'),
-	'M206': new Course('Probability Theory', 'Prob', 'T2'),
-	'M208': new Course('Graph Theory', 'Graph', 'T3'),
-
-	'M301': new Course('Lebesgue Integration', 'Lebesgue', 'T8'),
-	'M307': new Course('Field Theory', 'Fields', 'L3'),
-	'M308': new Course('Complex Analysis', 'Complex', 'T6'),
-	'M310': new Course('Geometry of Curves and Surfaces', 'Geom', 'L1'),
-	'M311': new Course('Numerical Analysis', 'Num', 'T7'),
-
-	'M402': new Course('Representations of Finite Group', 'Rep FG', 'T3'),
-	'M404': new Course('Algebraic Topology', 'ATop', 'T2'),
-	'M454': new Course('Partial Differential Equations', 'PDEs', 'T8'),
-
-	'M552': new Course('Analytic Number Theory', 'ANT', 'L2'),
-	'M553': new Course('Classical Groups', 'Groups', 'L1'),
-	'M599': new Course('Algebraic Topology', 'ATop', 'T2'),
+	'M201': new Course('Real Analysis', 'RAnal', 'C'),
+	'M202': new Course('Group Theory', 'Groups', 'H'),
+	'M203': new Course('Discrete Mathematics', 'Discrete', 'B'),
+	'M207': new Course('Number Theory', 'Number', 'A'),
+	'M302': new Course('Rings and Modules', 'Modules', 'D'),
+	'M303': new Course('Differential Equation', 'DiffQ', 'G'),
+	'M304': new Course('Topology', 'Topo', 'F'),
+	'M305': new Course('Statistics', 'Stats', 'B'),
+	'M306': new Course('Calculus of Several Variables', 'SVC', 'C'),
+	'M401': new Course('Functional Analysis', 'FAnal', 'D'),
+	'M403': new Course('Commutative Algebra', 'CommA', 'E'),
+	'M457': new Course('Algebraic Graph Theory', 'GraphA', 'L'),
+	'M483': new Course('Introduction to Manifolds', 'Manifolds', 'C'),
+	'M475': new Course('Incidence Geometry', 'IGeo', 'L'),
+	'M466': new Course('Measure Theory', 'Measure', 'G'),
 
 	/* Physics */
-	'P204': new Course('Electromagnetism I', 'EM I', 'T3'),
-	'P205': new Course('Mathematical Methods II', 'MM II', 'T6'),
-	'P206': new Course('Quantum Mechanics I', 'QM I', 'T5'),
+	'P201': new Course('Classical Mechanics I', 'CM I', 'F'),
+	'P202': new Course('Mathematical Methods I', 'MMPhy I', 'I'),
+	'P207': new Course('Linear Optics', 'LinOpt', 'D'),
+	'P203': new Course('Electronics', 'Elec', 'A'),
+	'P302': new Course('Statistical Mechanics', 'StatMech', 'A'),
+	'P303': new Course('Quantum Mechanics II', 'QM II', 'D'),
+	'P304': new Course('Special Theory of Relativity', 'STR', 'J'),
+	'P307': new Course('Nuclei and Particle Physics', 'Nuclear', 'B'),
+	'P401': new Course('Classical Mechanics II: Mechanics of Continuous Media', 'CM II', 'F'),
+	'P453': new Course('Quantum Field Theory I', 'QFT I', 'I'),
+	'P463': new Course('Astronomy and Astrophysics', 'Astro', 'E'),
+	'P469': new Course('Density Functional Theory of Atoms Molecules and Solids', 'DFT', 'L'),
+	'P476': new Course('Non-Equilibrium Statistical Mechanics', 'NESM', 'B'),
+	'P475': new Course('Special Topics in Quantum Mechanics', 'QM III', 'D'),
 
-	'P301': new Course('Electromagnetism II', 'EM II', 'T7'),
-	'P305': new Course('Atoms, Molecules and Radiation', 'AMR', 'T5'),
-	'P306': new Course('Introduction to Condensed Matter Physics', 'CMP', 'T6'),
-	
-	'P456': new Course('Nonlinear Optics and Lasers', 'NLOL', 'T8'),
-	'P457': new Course('General Relativity and Cosmology', 'GRC', 'T8'),
-	'P460': new Course('Many Particle Physics', 'MPP', 'T6'),
-	'P466': new Course('Quantum and Nano Electronics', 'QNE', 'T7'),
-	'P467': new Course('Nonlinear Dynamics and Chaos', 'Chaos', 'T3'),
-	'P470': new Course('Quantum Field Theory II', 'QFT II', 'T5'),
-	'P472': new Course('Experimental High Enery Physics', 'EHEP', 'T7'),
-
+	'P601': new Course('Classical Mechanics (PhD)', 'CM', 'K'),
+	'P602': new Course('Mathematical Methods (PhD)', 'MM', 'J'),
+	'P603': new Course('Electromagnetism (PhD)', 'EM', 'L'),
+	'P704': new Course('Special Theory of Relativity (PhD)', 'STR', 'J'),
+	'P707': new Course('Nuclei and Particle Physics (PhD)', 'Nuclear', 'B'),
 
 };
 
