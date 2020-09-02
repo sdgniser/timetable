@@ -6,7 +6,7 @@ let schoolList = document.querySelector('#school-list');
  * and the list of courses */
 for (let school in schools) {
 	let schoolTab = document.createElement('button');
-	schoolTab.textContent = short_name(schools[school])
+	schoolTab.textContent = school;
 	schoolTab.addEventListener('click', function() { 
 		document.querySelectorAll('.school').forEach(function(b) { b.classList.add('hidden') });
 		let schoolCourses = document.querySelector('#' + school);

@@ -21,6 +21,7 @@ let schools = {
 	'SBS': new School('B', 'School of Biological Sciences', []),
 	'SCS': new School('C', 'School of Chemical Sciences', []),
 	'SCPS': new School('CS', 'School of Computer Sciences', []),
+	'SHSS': new School('H', 'School of Humanities and Social Sciences', []),
 	'SMS': new School('M', 'School of Mathematical Sciences', []),
 	'SPS': new School('P', 'School of Physical Sciences', []),
 };
@@ -65,6 +66,12 @@ let courses = {
 	'CS301': new Course('Design and Analysis of Algorithms', 'Algo', 'K'),
 	'CS454': new Course('Linear Programming and Combinatorial Optimization', 'Optim', 'K'),
 	'CS460': new Course('Machine Learning', 'ML', 'J'),
+
+	/* Humanities */
+	'H209': new Course('Speculative Fiction', 'SpecFic', 'J1'),
+	'H225': new Course('Introduction to Psychology', 'Psych', 'J1'),
+	'H235': new Course('Sociology of Science and Technology', 'Socio', 'J2'),
+	'H238': new Course('Life and Community in the Urban World', 'Urban', 'J2'),
 
 	/* Mathematics */
 	'M201': new Course('Real Analysis', 'RAnal', 'C'),
