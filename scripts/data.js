@@ -45,7 +45,7 @@ let courses = {
 	'B552': new Course('Advanced Immunology', 'AImmuno', 'K'),
 	
 	'B601': new Course('Bioinformatics and Computational Biology', 'BInfo', 'D'),
-	'B602': new Course('Biotechniques', 'BTech', 'L'),
+	'B602': new Course('Biotechniques', 'BTech', 'D'),
 
 	/* Chemistry */
 	'C201': new Course('Basic Inorganic Chemistry', 'IChem', 'K'),
