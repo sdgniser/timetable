@@ -21,9 +21,9 @@ let schools = {
 	'SBS': new School('B', 'School of Biological Sciences', []),
 	'SCS': new School('C', 'School of Chemical Sciences', []),
 	'SCPS': new School('CS', 'School of Computer Sciences', []),
-	'SHSS': new School('H', 'School of Humanities and Social Sciences', []),
 	'SMS': new School('M', 'School of Mathematical Sciences', []),
 	'SPS': new School('P', 'School of Physical Sciences', []),
+//	'SHSS': new School('H', 'School of Humanities and Social Sciences', []),
 };
 
 let courses = {
