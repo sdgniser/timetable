@@ -23,7 +23,7 @@ let schools = {
 	'SCPS': new School('CS', 'School of Computer Sciences', []),
 	'SMS': new School('M', 'School of Mathematical Sciences', []),
 	'SPS': new School('P', 'School of Physical Sciences', []),
-//	'SHSS': new School('H', 'School of Humanities and Social Sciences', []),
+	'SHSS': new School('H', 'School of Humanities and Social Sciences', []),
 };
 
 let courses = {
@@ -105,6 +105,12 @@ let courses = {
 	'P461': new Course('Physics of Mesoscipic Systems', 'Meso', 'D'),
 	'P468': new Course('Magnetism and Superconductivity', 'Magnets', 'C'),
 	'P477': new Course('Relativistic Nucleus-Nucleus Collisions and Quark Gluon Plasma', 'RNNCQGP', 'D'),
+
+	/* HuMaNiTiEs */
+	'H205': new Course('Environmental Economics and Environmental Impace Assessment', 'Env Eco', 'B1'),
+	'H210': new Course('The City in Modern Fiction', 'City Fic', 'B2'),
+	'H227': new Course('Organizational Behaviour', 'OB', 'L1'),
+	'H237': new Course('Science Communication and the Citizenship', 'Sci Comm', 'L2'),
 };
 
 for (let course in courses) {
