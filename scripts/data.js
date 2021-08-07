@@ -28,89 +28,93 @@ let schools = {
 
 let courses = {
 
+	// always use A1, A2, ... for degenerates of slot A
+
 	/* Biology */
-	'B204': new Course('Cell Biology', 'C Bio', 'F'),
-	'B205': new Course('Genetics', 'Gene', 'G'),
+	'B201': new Course('Microbiology', 'μBio', 'C'),
+	'B202': new Course('Biochemistry', 'BChem', 'F'),
+	'B203': new Course('Biophysics & Biostatistics', 'BPhy', 'A'),
 
-	'B304': new Course('Molecular Biology', 'M Bio', 'G'),
-	'B305': new Course('Immunology', 'Immuno', 'A'),
-	'B306': new Course('Evolutionary Biology', 'E Bio', 'L'),
-	'B351': new Course('Principles of Drug Design', 'Drug', 'D'),
-	'B352': new Course('Endocrinology', 'Endo', 'B'),
-	'B353': new Course('Plant Developmental Biology', 'PD Bio', 'I'),
+	'B301': new Course('Physiology I (Animal)', 'APhys', 'B'),
+	'B302': new Course('Physiology II (Plant)', 'PPhys', 'F'),
+	'B303': new Course('Ecology', 'Eco', 'E'),
+	'B354': new Course('Neurobiology', 'Neuro', 'A'),
+	'B355': new Course('Structural Biology', 'StructB', 'A'),
 
-	'B405': new Course('Biotechniques', 'Biotech', 'G'),
-	'B453': new Course('Advanced Biochemistry', 'ABC', 'A'),
-	'B454': new Course('Advanced Microbiology', 'AμB', 'C'),
-	'B455': new Course('Enzymology', 'Enzyme', 'E'),
+	'B402': new Course('Developmental Biology', 'Dev Bio', 'F'),
+	'B403': new Course('Bioinformatics', 'BInfo', 'K'),
+	'B452': new Course('Genetic Engineering', 'Genetic', 'A'),
+	'B460': new Course('Virology', 'Viro', 'J'),
 
-	'B554': new Course('Cancer Biology', 'Cancer', 'B'),
-	'B558': new Course('Quantitative Biology', 'Quant', 'A'),
-	'B556': new Course('Immune Regulation and Infection Immunity', 'Immune', 'J'),
+	'B551': new Course('Advanced Molecular Biology', 'AMol', 'C'),
+	'B559': new Course('Ion Channels', 'iChan', 'I'),
+	'B562': new Course('Molecular Errors in Disease', 'merr', 'B'),
 
 	/* Chemistry */
-	'C204': new Course('Reagents in Organic Synthesis', 'ROS', 'E'),
-	'C205': new Course('Main Group and Organometallic Chemistry', 'MGOC', 'C'),
-	'C206': new Course('Quantum Chemistry I', 'QC I', 'J'),
+	'C201': new Course('Basic Inorganic Chemistry', 'IChem', 'E'),
+	'C207': new Course('Mathematical Methods for Chemists', 'MMChem', 'B'),
+	'C203': new Course('Reaction Mechanisms in Organic Chemistry', 'OChem', 'D'),
 
-	'C304': new Course('Coordination Chemistry', 'Coord', 'K'),
-	'C305': new Course('Chemical Binding', 'Bind', 'H'),
-	'C306': new Course('Physical Methods in Chemistry I', 'PMC I', 'C'),
-	
-	'C402': new Course('Chemical Rate Processes', 'CRP', 'K'),
-	
-	'C554': new Course('Crystallography', 'Crystal', 'C'),
-	'C556': new Course('Advanced Bio-inorganic Chemistry', 'ABiC', 'I'),
-	'C565': new Course('Advanced Organic Chemistry', 'AOC', 'A'),
-	'C559': new Course('Supramolecular Chemistry', 'Supra', 'B'),
-	'C568': new Course('Advanced Fluorescence Spectroscopy', 'AFS', 'B'),
-	'C571': new Course('Statistical Mechanics', 'Stat Mech', 'A'),
+	'C301': new Course('Physical Organic Chemistry', 'POChem', 'A'),
+	'C302': new Course('Molecular Spectroscopy and Group Theory', 'Spectre', 'K'),
+	'C307': new Course('Thermodynamics and Electrochemistry', 'Thermo', 'C'),
+
+	'C401': new Course('Physical Methods in Chemistry II', 'PChem II', 'J'),
+	'C403': new Course('Chemistry of Heterocycles and Natural Products', 'Hetero', 'K'),
+
+	'C560': new Course('Chemistry of Nanomaterials', 'NanoC', 'C'),
+	'C564': new Course('Theory of Molecular Spectroscopy', 'MolSpect', 'A'),
+	'C566': new Course('Catalysis', 'Cat', 'B'),
+	'C567': new Course('Advanced Main Group Chemistry', 'AdvMG', 'B'),
+	'C569': new Course('Biomacromolecules', 'BioMM', 'A'),
 
 	/* Computer Science */
-	'CS202': new Course('Discrete Structures and Computation', 'DSC', 'H'),
-	'CS451': new Course('Modern Cryptology', 'Crypto', 'E'),
-	'CS458': new Course('Approximation Algorithms', 'Approx', 'E'),
+	'CS201': new Course('Theory of Computation', 'ThComp', 'I'),
+	'CS301': new Course('Design and Analysis of Algorithms', 'Algo', 'E'),
+	'CS452': new Course('Algorithmic Coding Theory', 'CG', 'B'),
+	'CS460': new Course('Machine Learning', 'ML', 'F'),
+
+	/* Humanities */
+	'H209': new Course('Speculative Fiction', 'SpecFic', 'K1'),
+	'H225': new Course('Introduction to Psychology', 'Psych', 'K2'),
+	'H235': new Course('Sociology of Science and Technology', 'Socio', 'J1'),
+	'H238': new Course('Life and Community in the Urban World', 'Urban', 'J2'),
 
 	/* Mathematics */
-	'M204': new Course('Metric Spaces', 'Metric', 'E'),
-	'M205': new Course('Linear Algebra', 'Lin Alg', 'K'),
-	'M206': new Course('Probability Theory', 'Prob', 'C'),
-	'M208': new Course('Graph Theory', 'Graph', 'G'),
+	'M201': new Course('Real Analysis', 'RAnal', 'B'),
+	'M203': new Course('Discrete Mathematics', 'Discrete', 'C'),
+	'M205': new Course('Linear Algebra', 'Lin Alg', 'D'),
 
-	'M301': new Course('Lebesgue Integration', 'Lebesgue', 'G'),
-	'M307': new Course('Field Theory', 'Fields', 'D'),
-	'M308': new Course('Complex Analysis', 'Complex', 'A'),
-	'M310': new Course('Geometry of Curves and Surfaces', 'Geom', 'F'),
+	'M302': new Course('Rings and Modules', 'Modules', 'C'),
+	'M303': new Course('Differential Equation', 'DiffQ', 'K'),
+	'M304': new Course('Topology', 'Topo', 'B'),
+	'M305': new Course('Statistics', 'Stats', 'A'),
+	'M306': new Course('Calculus of Several Variables', 'SVC', 'D'),
 
-	'M402': new Course('Representation of Finite Groups', 'Rep FG', 'B'),
-	'M404': new Course('Algebraic Topology', 'ATop', 'H'),
-	'M456': new Course('Algebraic Geometry', 'AGeo', 'C'),
-
-	'M554': new Course('Ergodic Theory', 'Groups', 'A'),
-	'M558': new Course('Representation of Linear Lie Groups', 'Rep LLG', 'A'),
-	'M568': new Course('Ordered Linear Spaces', 'OLS', 'A'),
+	'M401': new Course('Functional Analysis', 'FAnal', 'A'),
+	'M403': new Course('Commutative Algebra', 'CommA', 'C'),
+	'M451': new Course('Advanced Complex Analysis', 'ACAnal', 'A'),
+	'M453': new Course('Advanced Linear Algebra', 'ALinA', 'D'),
+	'M454': new Course('Partial Differential Equations', 'PDEs', 'B'),
+	'M463': new Course('Finite Fields', 'Field', 'D'),
 
 	/* Physics */
-	'P204': new Course('Electromagnetism I', 'EM I', 'I'),
-	'P205': new Course('Mathematical Methods II', 'MM II', 'G'),
-	'P206': new Course('Quantum Mechanics I', 'QM I', 'A'),
+	'P201': new Course('Classical Mechanics I', 'CM I', 'A'),
+	'P202': new Course('Mathematical Methods I', 'MMPhy I', 'C'),
+	'P207': new Course('Linear Optics', 'LinOpt', 'F'),
 
-	'P301': new Course('Electromagnetism II', 'EM II', 'F'),
-	'P305': new Course('Atoms, Molecules and Radiation', 'AMR', 'I'),
-	'P306': new Course('Introduction to Condensed Matter Physics', 'CMP', 'A'),
-	
-	'P455': new Course('Introduction to Phase Transition and Critial Phenomena', 'Phase', 'B'),
-	'P454': new Course('Particle Physics', 'Particle', 'F'),
-	'P457': new Course('General Relativity and Cosmology', 'GRC', 'H'),
-	'P461': new Course('Physics of Mesoscipic Systems', 'Meso', 'D'),
-	'P468': new Course('Magnetism and Superconductivity', 'Magnets', 'C'),
-	'P477': new Course('Relativistic Nucleus-Nucleus Collisions and Quark Gluon Plasma', 'RNNCQGP', 'D'),
+	'P302': new Course('Statistical Mechanics', 'StatMech', 'C'),
+	'P303': new Course('Quantum Mechanics II', 'QM II', 'J'),
+	'P304': new Course('Special Theory of Relativity', 'STR', 'F'),
 
-	/* HuMaNiTiEs */
-	'H205': new Course('Environmental Economics and Environmental Impace Assessment', 'Env Eco', 'B1'),
-	'H210': new Course('The City in Modern Fiction', 'City Fic', 'B2'),
-	'H227': new Course('Organizational Behaviour', 'OB', 'L1'),
-	'H237': new Course('Science Communication and the Citizenship', 'Sci Comm', 'L2'),
+	'P401': new Course('Classical Mechanics II: Mechanics of Continuous Media', 'CM II', 'E'),
+	'P451': new Course('Advanced Solid State Physics', 'ASSP', 'C'),
+	'P453': new Course('Quantum Field Theory I', 'QFT I', 'A'),
+	'P462': new Course('Introduction to Quantum Optics', 'QOpt', 'B'),
+	'P471': new Course('Quantum Information and Quantum Computation', 'QIQC', 'D'),
+	'P473': new Course('Experimental Techniques', 'Exp', 'J'),
+	'P474': new Course('Introduction to Cosmology', 'Cosmo', 'C'),
+
 };
 
 for (let course in courses) {
