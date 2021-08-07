@@ -48,6 +48,12 @@ function clean() {
 	})
 }
 
+/*to deal with conflicts like A and A1*/
+function slotCompare(currentc, newc) {
+	 if(currentc.length != newc.length) return currentc.charAt(0) === newc.charAt(0)
+	 return currentc === newc
+}
+
 /* Replaces the slots in the timetable with the selected
  * course in that slot */
 function generate(nick) {
@@ -59,7 +65,7 @@ function generate(nick) {
 			let courseCode = course.getAttribute('id');
 			let courseSlot = courses[courseCode].slot;
 			for (let i = 0; i < occupiedSlots.length; ++i) {
-				if (occupiedSlots[i] === courseSlot) {
+				if (slotCompare(occupiedSlots[i], courseSlot)) {
 					alert("Schedule conflict detected. Course selection may need a modification.");
 					location = location;
 				}
