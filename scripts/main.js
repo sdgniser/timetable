@@ -51,6 +51,7 @@ function clean() {
 /* Replaces the slots in the timetable with the selected
  * course in that slot */
 function generate(nick) {
+	clean()
 	let courseCheckBoxes = document.querySelectorAll('input');
 	let occupiedSlots = []
 	courseCheckBoxes.forEach(function(course) {
@@ -95,7 +96,7 @@ function generatePdf() {
 
 	let timetable = document.querySelector('table');
 	let jsonTable = doc.autoTableHtmlToJson(timetable);
-	doc.text('Timetable for Spring Semester 2019', 300, 25);
+	doc.text('Timetable for Fall Semester 2021', 300, 25);
 	doc.autoTable(jsonTable.columns, jsonTable.data, {
 		styles: {cellPadding: 10,
 				 fontSize: 12,
@@ -106,7 +107,7 @@ function generatePdf() {
 				 valign: 'middle'},
 		theme: 'plain'});
 
-	doc.save("tt_spring_2019.pdf");
+	doc.save("tt_fall_2021.pdf");
 }
 
 let generateCodeButton = document.querySelector('button#gen-code');
