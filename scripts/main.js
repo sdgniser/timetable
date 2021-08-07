@@ -59,11 +59,16 @@ function clean() {
 	})
 }
 
+/*to deal with conflicts like A and A1*/
+function slotCompare(currentc, newc) {
+	 if(currentc.length != newc.length) return currentc.charAt(0) === newc.charAt(0)
+	 return currentc === newc
+}
+
 /* Replaces the slots in the timetable with the selected
  * course in that slot */
 function generate(nick) {
 	clean();
-
 	let courseCheckBoxes = document.querySelectorAll('input');
 	let occupiedSlots = []
 	courseCheckBoxes.forEach(function(course) {
@@ -71,7 +76,7 @@ function generate(nick) {
 			let courseCode = course.getAttribute('id');
 			let courseSlot = courses[courseCode].slot;
 			for (let i = 0; i < occupiedSlots.length; ++i) {
-				if (occupiedSlots[i] === courseSlot) {
+				if (slotCompare(occupiedSlots[i], courseSlot)) {
 					alert("Schedule conflict detected. Course selection may need a modification.");
 					location = location;
 				}
@@ -96,7 +101,7 @@ function generatePdf() {
 
 	let timetable = document.querySelector('table');
 	let jsonTable = doc.autoTableHtmlToJson(timetable);
-	doc.text('Timetable for ' + semester + ' Semester ' + year, 300, 25);
+	doc.text('Timetable for Fall Semester 2021', 300, 25);
 	doc.autoTable(jsonTable.columns, jsonTable.data, {
 		styles: {cellPadding: 10,
 				 fontSize: 12,
@@ -107,7 +112,7 @@ function generatePdf() {
 				 valign: 'middle'},
 		theme: 'plain'});
 
-	doc.save(semester + year + '.pdf');
+	doc.save("tt_fall_2021.pdf");
 }
 
 let generateCodeButton = document.querySelector('button#gen-code');
