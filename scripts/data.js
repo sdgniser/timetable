@@ -65,7 +65,7 @@ let courses = {
 	'C560': new Course('Chemistry of Nanomaterials', 'NanoC', 'C'),
 	'C564': new Course('Theory of Molecular Spectroscopy', 'MolSpect', 'A'),
 	'C566': new Course('Catalysis', 'Cat', 'B'),
-	'C567': new Course('Advanced Main Group Chemistry', 'AdvMG', 'B'),
+	'C567': new Course('Advanced Main Group Chemistry', 'AdvMG', 'I'),
 	'C569': new Course('Biomacromolecules', 'BioMM', 'A'),
 
 	/* Computer Science */
@@ -95,7 +95,7 @@ let courses = {
 	'M403': new Course('Commutative Algebra', 'CommA', 'C'),
 	'M451': new Course('Advanced Complex Analysis', 'ACAnal', 'A'),
 	'M453': new Course('Advanced Linear Algebra', 'ALinA', 'D'),
-	'M454': new Course('Partial Differential Equations', 'PDEs', 'B'),
+	'M454': new Course('Partial Differential Equations', 'PDEs', 'I'),
 	'M463': new Course('Finite Fields', 'Field', 'D'),
 
 	/* Physics */
@@ -103,7 +103,7 @@ let courses = {
 	'P202': new Course('Mathematical Methods I', 'MMPhy I', 'C'),
 	'P207': new Course('Linear Optics', 'LinOpt', 'F'),
 
-	'P302': new Course('Statistical Mechanics', 'StatMech', 'C'),
+	'P302': new Course('Statistical Mechanics', 'StatMech', 'I'),
 	'P303': new Course('Quantum Mechanics II', 'QM II', 'J'),
 	'P304': new Course('Special Theory of Relativity', 'STR', 'F'),
 
