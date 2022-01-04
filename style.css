@@ -1,92 +1,155 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-	font-family: sans-serif;
-  line-height: 1.2;
-  font-size: 10px;
+    font-family: sans-serif;
+    line-height: 1.2;
+    font-size: 10px;
 }
 
 body {
-	margin: 0 auto;
-	max-width: 1100px;
-	padding: 0 2rem 0 2rem;
-  font-size: 1.6rem;
+    margin: 0 auto;
+    padding: 0 2rem 0 2rem;
+    font-size: 1.6rem;
+    overflow-x: hidden;
 }
 
 .school {
-	display: inline-block;
+    display: inline-block;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 .visible {
-  display: visible;
+    display: visible;
 }
 
 .buttons {
-	text-align: center;
+    text-align: center;
 }
 
 .buttons > button {
-  margin-right: .4rem;
-  margin-bottom: .4rem;
+    margin-right: .4rem;
+    margin-bottom: .4rem;
 }
 
 button {
-  background: #fff;
-  border-radius: 0;
-  font-size: 100%;
-  padding: .5em .5em;
-  min-width: 10rem;
+    background: #fff;
+    border-radius: 0;
+    border-color: rgb(227, 227, 227);
+    font-size: 100%;
+    padding: .5em .5em;
+    min-width: 10rem;
 }
 
 button:hover {
-  cursor: pointer;
-}
-
-#pdf {
-	margin-top: 1rem;
+    cursor: pointer;
 }
 
 h1,
 h2 {
-	text-align: center;
+    text-align: center;
 }
 
 table {
-	table-layout: fixed;
-	width: 100%;
-	border-collapse: collapse;
-	border: 2px solid;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid;
 }
 
 th,
 td {
-	padding: 0.8rem;
-	border: 1px solid;
-	text-align: center;
-  word-wrap: break-word;
-  width: 9rem;
+    padding: 0.8rem;
+    border: 1px solid;
+    text-align: center;
+    word-wrap: break-word;
+    width: 9rem;
 }
 
 th:nth-child(1) {
-	width: 12rem;
+    width: 12rem;
+}
+
+footer {
+    margin: 1rem auto;
 }
 
 footer ul {
-	padding: 1rem 0;
-	text-align: right;
-	margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    margin: 0;
 }
 
 footer li {
-	display: inline-block;
-	list-style: none;
-	padding-left: .4rem;
+    display: inline-block;
+    list-style: none;
+    padding-left: .4rem;
+}
+
+.school ul {
+    list-style: none;
+}
+
+.school ul li {
+    margin-left: -2.75em;
+}
+.school ul li label {
+    margin-left: 0.4em;
+}
+
+#tab {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+#legend {
+    margin: 0;
+    padding: 0;
+}
+
+#legend li {
+    list-style: none;
+    white-space: pre;
+}
+
+.buttons > div {
+    width: 14rem;
+    margin: 1rem auto;
+    padding: .5em .5em;
+    border-radius: 0;
+    border-style: solid;
+    border-color: rgb(227, 227, 227);
+}
+
+@media (min-width:1080px) {
+    body {
+        margin: 0 4vw;
+    }
+
+    #wrapper {
+        display: grid;
+        grid-template-areas: "controls preview";
+        column-gap: 20px;
+    }
+
+    #controls {
+        grid-area: controls;
+        min-width: 20vw;
+    }
+
+    #preview {
+        grid-area: preview;
+        max-width: 60vw;
+    }
+
+    #preview h2:nth-of-type(2) {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
 }

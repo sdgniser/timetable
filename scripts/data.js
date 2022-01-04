@@ -124,3 +124,17 @@ for (let course in courses) {
 		}
 	}
 }
+
+// Colorblindness-friendly color palette from: https://davidmathlogic.com/colorblind/
+let colors = [
+	'#117733',
+	'#44aa99',
+	'#d55e00',
+	'#88ccee',
+	'#0072b2',
+	'#ddcc77',
+	'#cc6677',
+	'#aa4499',
+	'#882255',
+	'#e69f00'
+];
