@@ -160,7 +160,7 @@ function generatePdf() {
 	];
 
 	let centerX = doc.internal.pageSize.getWidth() / 2;
-	doc.text('Timetable for Fall Semester 2021', centerX, 25, {align: 'center'});
+	doc.text('Timetable for Spring Semester 2022', centerX, 25, {align: 'center'});
 	doc.autoTable({
 		html: 'table',
 		theme: 'plain',
@@ -193,7 +193,7 @@ function generatePdf() {
 	doc.text('Legend', 40, finalY);
 	doc.html(document.getElementById('legend'), {
 		callback: function (doc) {
-			doc.save("tt_fall_2021.pdf");
+			doc.save("tt_spring_2022.pdf");
 		},
 		x: 40,
 		y: finalY + 7,
