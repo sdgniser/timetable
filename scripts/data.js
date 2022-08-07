@@ -63,9 +63,9 @@ let courses = {
 	'C568': new Course('Advanced Fluorescence Spectroscopy (C6)', 'AdvFluoro', 'E'),
 
 	/* Computer Science */
-	'CS202': new Course('Discrete Structures & Computation (M5)', 'DiscComp', 'C'),
-	'CS456': new Course('Computational Geometry (M3)', 'CompGeom', 'E'),
-	'CS461': new Course('Advanced Machine Learning (M5)', 'AdvML', 'A'),
+	'CS201': new Course('Theory of computaion', 'Th CS', 'B'),
+	'CS301': new Course('Design and Analysis of Algirithms', 'Algorithm', 'F'),
+	'CS461': new Course('Linear Programming and Combinatorial optimisation', 'Optimisation', 'F'),
 
 	/* Humanities */
 	'H205': new Course('Environmental Economics and Environmental Impact Assessment (LH3)', 'EnvEcon', 'J1'),
