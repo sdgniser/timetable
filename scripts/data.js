@@ -32,12 +32,12 @@ let courses = {
 	'B204': new Course('Cell Biology (LH1)', 'CellBio', 'A'),
 	'B206/B304': new Course('Molecular Biology (LH3)', 'MolBio', 'E'),
 
-	'B305': new Course('Immunology (B1)', 'Immuno', 'F'),
+	'B303': new Course('Ecology', 'Ecology', 'J'),
 	'B306': new Course('Evolutionary Biology (LH2)', 'EvolBio', 'C'),
 	'B351': new Course('Principles of Drug Design (B2)', 'Drug', 'D'),
 	'B352': new Course('Endocrinology (B3)', 'Endo', 'B'),
 
-	'B405': new Course('Biotechniques (B6)', 'Biotech', 'F'),
+	'B403': new Course('Bioinformatics', 'Bio Inf', 'E'),
 	'B453': new Course('Advanced Biochemistry (B4)', 'AdvBioChem', 'B'),
 	'B455': new Course('Enzymology (LH1)', 'Enzymo', 'J'),
 
@@ -47,7 +47,7 @@ let courses = {
 
 	/* Chemistry */
 	'C204': new Course('Reagents in Organic Synthesis (LH1)', 'Reagents', 'D'),
-	'C205': new Course('Mathematical Methods for Chemists (LH1)', 'MMChem', 'E'),
+	'C205': new Course('Mathematical Methods for Chemists (LH2)', 'MMChem', 'B'),
 	'C206': new Course('Quantum Chemistry (LH1)', 'QChem', 'B'),
 
 	'C304': new Course('Coordination Chemistry (LH4)', 'Coord', 'F'),
