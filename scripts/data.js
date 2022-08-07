@@ -1,5 +1,5 @@
 let year = '2022';
-let semester = 'Spring';
+let semester = 'Fall';
 
 function School(code, name, courses) {
 	this.code = code;
@@ -74,44 +74,39 @@ let courses = {
 	'H237': new Course('Science communication and the citizenship (LH1)', 'SciCom', 'K1'),
 
 	/* Mathematics */
-	'M202': new Course('Group Theory (M1)', 'Group', 'D'),
-	'M204': new Course('Metric Spaces (M1)', 'Metric', 'B'),
-	'M206': new Course('Probability Theory (M1)', 'Prob', 'A'),
+	'M201': new Course('Real Analysis', 'RAnal', 'C'),
+	'M203': new Course('Discrete Mathematics', 'Discrete', 'A'),
+	'M205': new Course('Linear Algebra', 'Lin Alg', 'D'),
 
-	'M301': new Course('Lebesgue Integral (M2)', 'Lebesg', 'J'),
-	'M307': new Course('Field Theory (M2)', 'Field', 'D'),
-	'M308': new Course('Complex Analysis (M2)', 'CompAnal', 'F'),
-	'M310': new Course('Geometry of curves and surfaces (M2)', 'Curv&Surf', 'A'),
-	'M311': new Course('Numerical Analysis (M2)', 'NumAnal', 'K'),
+	'M302': new Course('Rings and Modules', 'Modules', 'A'),
+	'M303': new Course('Differential Equation', 'DiffQ', 'C'),
+	'M305': new Course('Number Theory', 'Number', 'E'),
+	'M306': new Course('Calculus of Several Variables', 'SVC', 'B'),
 
-	'M402': new Course('Representation of Finite Groups (M4)', 'FinGroups', 'G'),
-	'M455': new Course('Introduction to Stochastic Process (M1)', 'StocProc', 'E'),
-	'M458': new Course('Algebraic Number Theory (M3)', 'AlgebNum', 'A'),
-	'M464': new Course('Information and Coding Theory (M1)', 'Info&Code', 'H'),
-	'M478': new Course('Advances Partial Differential Equations', 'AdvPartDiff', 'A'),
-
-	'M555': new Course('Harmonic Analysis (M3)', 'HarmAnal', 'D'),
-	'M557': new Course('Operator Algebras (M3)', 'OpAlg', 'F'),
+	'M401': new Course('Functional Analysis', 'F Anal', 'H'),
+	'M403': new Course('Commutative Algebra', 'Comm Alg', 'G'),
+	'M451': new Course('Advanced Complex Analysis', 'AC Anal', 'C'),
+	'M467': new Course('Nonlinear Analysis', 'NL Anal', 'D'),
+	'M471': new Course('Advanced Number Theory', 'Adv Num', 'A'),
+	'M479': new Course('Random Graphs', 'R Graphs', 'B'),
 
 	/* Physics */
-	'P204': new Course('Electromagnetism I (LH2)', 'EM1', 'E'),
-	'P205': new Course('Mathematical Methods II (LH2)', 'MM2', 'D'),
-	'P206': new Course('Quantum Mechanics I (LH2)', 'QM1', 'F'),
+	'P201': new Course('Classical Mechanics I', 'CM I', 'E'),
+	'P202': new Course('Mathematical Methods I', 'MMPhy I', 'F'),
+	'P207': new Course('Linear Optics', 'LinOpt', 'A'),
 
-	'P301': new Course('Electromagnetism II (P107)', 'EM2', 'E'),
-	'P306': new Course('Nuclei and Particles (P107)', 'NucPart', 'D'),
-	'P307': new Course('Introduction to Condensed Matter physics (LH1)', 'CondMat', 'F'),
+	'P302': new Course('Statistical Mechanics', 'StatMech', 'E'),
+	'P303': new Course('Quantum Mechanics II', 'QM II', 'A'),
+	'P304': new Course('Special Theory of Relativity', 'STR', 'D'),
 
-	'P452': new Course('Computational Physics (P107)', 'CompPhy', 'J'),
-	'P456': new Course('Nonlinear Optics & Lasers (P127)', 'NonLinOpt', 'K'),
-	'P457': new Course('General Theory of Relativity and Cosmology (P110)', 'GTR', 'C'),
-	'P464': new Course('Plasma Physics and Magneto-hydrodynamics (P109)', 'Plasma&MHD', 'F'),
-	'P467': new Course('NonLinear Physics, Chaos and Turbulence (P109)', 'Chaos&Turb', 'B'),
-	'P470': new Course('Quantum Field Theory II (P108)', 'QFT2', 'E'),
-	'P472': new Course('Experimental High Energy Physics (P108)', 'ExpHEP', 'D'),
-
-	'P714': new Course('Statistical Mechanics (P127)', 'StatMech', 'G'),
-	'P715': new Course('Quantum Mechanics (P127)', 'QM', 'H'),
+	'P401': new Course('Classical Mechanics II: Mechanics of Continuous Media', 'CM II', 'D'),
+	'P405': new Course('Atoms Molecules and Radiation', 'Rad', 'E'),
+	'P453': new Course('Quantum Field Theory', 'QFT', 'B'),
+	'P460': new Course('Many Particle Physics', 'MPP', 'C'),
+	'P463': new Course('Astronomy and Astrophysics', 'Astro', 'C'),
+	'P475': new Course('Special Topics in Quantum Mechanics', 'Spl QM', 'A'),
+	'P476': new Course('Non Equilibrium Statistical Mechanics', 'NESM', 'A'),
+	'P466': new Course('Quantum and Nano Electronics', 'QElec', 'A'),
 };
 
 for (let course in courses) {
