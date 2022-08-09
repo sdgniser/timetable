@@ -9,7 +9,7 @@ let occupiedSlotsGlob = [];
 for (let school in schools) {
 	let schoolTab = document.createElement('button');
 	schoolTab.textContent = school;
-	schoolTab.addEventListener('click', function() { 
+	schoolTab.addEventListener('click', function() {
 		document.querySelectorAll('.school').forEach(function(b) { b.classList.add('hidden') });
 		let schoolCourses = document.querySelector('#' + school);
 		schoolCourses.classList.remove('hidden');
@@ -124,7 +124,7 @@ function generate(nick) {
 	}
 
 	// Legend
-    legendItems = legendItems.sort(function(a, b) { 
+    legendItems = legendItems.sort(function(a, b) {
         return a[0] > b[0] ? 1 : -1;
     });
 
@@ -154,13 +154,13 @@ function generatePdf() {
 
 	let notPainted = [
 		'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
-		'', 'Day', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 
+		'', 'Day', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',
 		'08:30', '09:30', '10:30', '11:30', '12:30', '13:30', '14:30', '15:30',
 		'16:30', '17:30', '18:30', 'No Class', 'No', 'Lunch Break', 'Lunch'
 	];
 
 	let centerX = doc.internal.pageSize.getWidth() / 2;
-	doc.text('Timetable for Spring Semester 2022', centerX, 25, {align: 'center'});
+	doc.text('Timetable for Fall Semester 2022', centerX, 25, {align: 'center'});
 	doc.autoTable({
 		html: 'table',
 		theme: 'plain',
@@ -193,7 +193,7 @@ function generatePdf() {
 	doc.text('Legend', 40, finalY);
 	doc.html(document.getElementById('legend'), {
 		callback: function (doc) {
-			doc.save("tt_spring_2022.pdf");
+			doc.save("tt_fall_2022.pdf");
 		},
 		x: 40,
 		y: finalY + 7,
