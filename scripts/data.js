@@ -1,5 +1,5 @@
 let year = '2022';
-let semester = 'Autumn';
+let semester = 'Fall';
 
 function School(code, name, courses) {
 	this.code = code;
@@ -71,7 +71,7 @@ let courses = {
 	'H209': new Course('Speculative Fiction', 'SpecFiction', 'J'),
 	'H235': new Course('Sociology of Science and Technology', 'Socio', 'K2'),
 	'H238': new Course('Life and Community in Urban World', 'Urban', 'K1'),
-	
+
 	/* Mathematics */
 	'M201': new Course('Real Ananlysis (M2)', 'RA', 'C'),
 	'M205': new Course('Linear Algebra (M2)', 'LinAlg', 'D'),
@@ -81,7 +81,7 @@ let courses = {
 	'M303': new Course('Differential Equations (M5)', 'DE', 'C'),
 	'M305': new Course('Number Theroy (M5)', 'NumTheory', 'E'),
 	'M306': new Course('Calculus of Several Variables (M5)', 'Calc', 'B'),
-	
+
 	'M401': new Course('Functional Analysis (M2)', 'FA', 'H'),
 	'M403': new Course('Commutative Algebra (M2)', 'CA', 'G'),
 	'M467': new Course('Non-linear Analysis (M4)', 'NLAnal', 'D'),
