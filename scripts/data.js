@@ -42,7 +42,7 @@ let courses = {
 	'B453': new Course('Advanced Biochemistry (B3)', 'AdvBiochem', 'A'),
 	'B454': new Course('Advanced Microbiology (B2)', 'AdvMicroBio', 'C'),
 	'B455': new Course('Enzymology (LH1)', 'Enzymo', 'E'),
-	'B456': new Course('Advanced Neurobiology (B1)', 'AdvNeuroBio', 'F'),
+	'B456': new Course('Advanced Neurobiology (B1)', 'AdvNeuroBio', 'F'), 
 
 	'B554': new Course('Cancer Biology (B4)', 'CancerBio', 'A'),
 	'B558': new Course('Quantitative Biology (B6)', 'QuantiBio', 'E'),
@@ -81,12 +81,12 @@ let courses = {
 
 	'M301': new Course('Lebesque Integration (M2)', 'LI', 'E'),
 	'M307': new Course('Field Theory (M2)', 'FT', 'A'),
-	'M308': new Course('Complex Analysis (M2)', 'CA', 'C'),
+	'M308': new Course('Complex Analysis (M2)', 'CA', 'G'),
 	'M309': new Course('Graph Theory (M2)', 'GraphTheo', 'B'),
-	'M311': new Course('Numerical Analysis (M5)', 'D'),
+	'M311': new Course('Numerical Analysis (M5)', 'H'),
 
-	'M402': new Course('Representations of Finite Groups (M2)', 'FG', 'G'),
-	'M404': new Course('Algebraic Topology (M2)', 'AT', 'H'),
+	'M402': new Course('Representations of Finite Groups (M2)', 'FG', 'H'),
+	'M404': new Course('Algebraic Topology (M2)', 'AT', 'G'),
 	'M456': new Course('Algebraic Geometry (M3)', 'AG', 'C'),
 	'M470': new Course('Abstract Harmonic Analysis (M2)', 'AbsHarmAnal', 'D'),
 	'M452': new Course('Advanced Functional Analysis (M3)', 'AdvFuncAnal', 'B'),
