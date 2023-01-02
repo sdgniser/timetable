@@ -36,7 +36,7 @@ let courses = {
 	'B305': new Course('Immunology (B2)', 'Immuno', 'B'),
 	'B307': new Course('Genetics (B2)', 'Gene', 'A'),
 	'B306': new Course('Evolutionary Biology (LH3)', 'EvoBio', 'J'),
-	'B353': new Course('Plant Developmental Biology (B3)', 'PlantDevBio', 'D'),
+	'B353': new Course('Plant Developmental Biology (B3)', 'PlantDev Bio', 'D'),
 
 	'B405': new Course('Biotechniques (B6)', 'Biotech', 'B'),
 	'B453': new Course('Advanced Biochemistry (B3)', 'AdvBiochem', 'A'),
