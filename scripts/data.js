@@ -39,10 +39,10 @@ let courses = {
 	'B353': new Course('Plant Developmental Biology (B3)', 'PlantDev Bio', 'D'),
 
 	'B405': new Course('Biotechniques (B6)', 'Biotech', 'B'),
-	'B453': new Course('Advanced Biochemistry (B3)', 'AdvBiochem', 'A'),
-	'B454': new Course('Advanced Microbiology (B2)', 'AdvMicroBio', 'C'),
+	'B453': new Course('Advanced Biochemistry (B3)', 'Adv Biochem', 'A'),
+	'B454': new Course('Advanced Microbiology (B2)', 'Adv MicroBio', 'C'),
 	'B455': new Course('Enzymology (LH1)', 'Enzymo', 'E'),
-	'B456': new Course('Advanced Neurobiology (B1)', 'AdvNeuroBio', 'F'), 
+	'B456': new Course('Advanced Neurobiology (B1)', 'Adv NeuroBio', 'F'), 
 
 	'B554': new Course('Cancer Biology (B4)', 'CancerBio', 'A'),
 	'B558': new Course('Quantitative Biology (B6)', 'QuantiBio', 'E'),
@@ -59,9 +59,9 @@ let courses = {
 	'C402': new Course('Chemical Rate Processes (C5)', 'ChemRate', 'F'),
 
 	'C554': new Course('Crystallography (C2)', 'Crystallo', 'C'),
-	'C556': new Course('Advanced Bio-Inorganic Chemistry (LH3)', 'BioInorgChem', 'A'),
+	'C556': new Course('Advanced Bio-Inorganic Chemistry (LH3)', 'Bio InorgChem', 'A'),
 	'C565': new Course('Advanced Organic Chemistry (C1)', 'Organo', 'D'),
-	'C567': new Course('Advanced Main Group Chemistry (C2)', 'MainGrpChem', 'A'),
+	'C567': new Course('Advanced Main Group Chemistry (C2)', 'MainGrp Chem', 'A'),
 	'C571': new Course('Statistical Mechanics (LH1)', 'StatMech', 'A'),
 
 	/* Computer Science */
@@ -88,11 +88,11 @@ let courses = {
 	'M402': new Course('Representations of Finite Groups (M2)', 'FG', 'H'),
 	'M404': new Course('Algebraic Topology (M2)', 'AT', 'G'),
 	'M456': new Course('Algebraic Geometry (M3)', 'AG', 'C'),
-	'M470': new Course('Abstract Harmonic Analysis (M2)', 'AbsHarmAnal', 'D'),
-	'M452': new Course('Advanced Functional Analysis (M3)', 'AdvFuncAnal', 'B'),
+	'M470': new Course('Abstract Harmonic Analysis (M2)', 'Abs HarmAnal', 'D'),
+	'M452': new Course('Advanced Functional Analysis (M3)', 'Adv FuncAnal', 'B'),
 	'M483': new Course('Introduction to Manifolds (M4)', 'Manifolds', 'B'),
 	'M463': new Course('Finite Fields (M5)', 'FF', 'B'),
-	'M451': new Course('Advanced Complex Analysis (M1)', 'AdvCompAnal', 'I'),
+	'M451': new Course('Advanced Complex Analysis (M1)', 'Adv CompAnal', 'I'),
 
 	'M561': new Course('Elliptical Curves (M1)', 'EC', 'A'),
 	'M554': new Course('Ergodic Theory (M3)', 'ET', 'A'),
