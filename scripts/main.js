@@ -160,7 +160,7 @@ function generatePdf() {
 	];
 
 	let centerX = doc.internal.pageSize.getWidth() / 2;
-	doc.text('Timetable for Fall Semester 2022', centerX, 25, {align: 'center'});
+	doc.text('Timetable for Fall Semester 2023', centerX, 25, {align: 'center'});
 	doc.autoTable({
 		html: 'table',
 		theme: 'plain',
