@@ -1,4 +1,4 @@
-let year = '2023';
+let year = '2024';
 let semester = 'Spring';
 
 function School(code, name, courses) {
