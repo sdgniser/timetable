@@ -107,7 +107,7 @@ let courses = {
 	'P452': new Course('Computational Physics (LH1)', 'CompPhys', 'D'),
 	'P456': new Course('Non-Linear Optics (P108)', 'NLO', 'B'),
 	'P457': new Course('General Theory of Relativity and Cosmology (P108)', 'GTR', 'A'),
-	'P464': new Course('Plasma Physics and Magnetohydrodynamics (P108)', 'PlasmaPhys', 'C'),
+	'P464': new Course('Plasma Physics and Magnetohydrodynamics (P108)', 'PlasmaPh', 'C'),
 	'P470': new Course('Quantum Field Theory II (P109)', 'QFT2', 'C'),
 	'P471': new Course('Quantum Information and Quantum Computation (P107)', 'QIQC', 'E'),
 
