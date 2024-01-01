@@ -193,7 +193,7 @@ function generatePdf() {
 	doc.text('Legend', 40, finalY);
 	doc.html(document.getElementById('legend'), {
 		callback: function (doc) {
-			doc.save("timetable_odd23.pdf");
+			doc.save("timetable_even24.pdf");
 		},
 		x: 40,
 		y: finalY + 7,
