@@ -101,10 +101,10 @@ let courses = {
 	'P206': new Course('Quantum Mechanics - I (P127)', 'QM1', 'B'),
 
 	'P301': new Course('Electromagnetism - II (P107)', 'EM2', 'C'),
-	'P306': new Course('Introdution to Condensed Matter Physics (P127)', 'CMP', 'B'),
-	'P307': new Course('Nuclei and Particles (LH3)', 'Nuclei', 'A'),
+	'P306': new Course('Introdution to Condensed Matter Physics (P107)', 'CMP', 'B'),
+	'P307': new Course('Nuclei and Particles (P107)', 'Nuclei', 'A'),
 
-	'P452': new Course('Computational Physics (LH1)', 'CompPhys', 'D'),
+	'P452': new Course('Computational Physics (LH1)', 'CompPhy', 'D'),
 	'P456': new Course('Non-Linear Optics (P108)', 'NLO', 'B'),
 	'P457': new Course('General Theory of Relativity and Cosmology (P108)', 'GTR', 'A'),
 	'P464': new Course('Plasma Physics and Magnetohydrodynamics (P108)', 'PlasmaPh', 'C'),
