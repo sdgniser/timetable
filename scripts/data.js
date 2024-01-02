@@ -65,20 +65,20 @@ let courses = {
 
 	/* Computer Science */
 	'CS202': new Course('Discrete Structures and Computation (M1)', 'DSC', 'E'),
-	'CS457': new Course('Paramterized Algorihms (M3)', 'ML', 'F'),
+	'CS457': new Course('Paramterized Algorihms (M3)', 'PA', 'F'),
 	'CS460': new Course('Machine Learning (M4)', 'ML', 'E'),
 
 	/* Humanities */
 	'H227': new Course('Organisational Behaviour (LH4)', 'OB', 'J'),
 	'H205': new Course('Environmental Economics and Environmental Impact Assessment (LH3)', 'EnvEco', 'K2'),
-	'H210': new Course('The City in Modern Fiction (LH3)', 'ModFiction', 'K1'),
+	'H210': new Course('The City in Modern Fiction (LH3)', 'MoF', 'K1'),
 
 	/* Mathematics */
 	'M202': new Course('Group Theory (M2)', 'GrpTheory', 'E'),
 	'M204': new Course('Metric Spaces (M2)', 'MetSpace', 'F'),
 	'M206': new Course('Probability Theory (M2)', 'PT', 'A'),
 
-	'M301': new Course('Lebesque Integration (M5)', 'LI', 'B'),
+	'M301': new Course('Lebesgue Integration (M5)', 'LI', 'B'),
 	'M307': new Course('Field Theory (M5)', 'FT', 'E'),
 	'M308': new Course('Complex Analysis (M5)', 'CA', 'C'),
 	'M309': new Course('Graph Theory (M5)', 'GraphTheo', 'D'),
@@ -107,7 +107,7 @@ let courses = {
 	'P452': new Course('Computational Physics (LH1)', 'CompPhy', 'D'),
 	'P456': new Course('Non-Linear Optics (P108)', 'NLO', 'B'),
 	'P457': new Course('General Theory of Relativity and Cosmology (P108)', 'GTR', 'A'),
-	'P464': new Course('Plasma Physics and Magnetohydrodynamics (P108)', 'PlasmaPhys', 'C'),
+	'P464': new Course('Plasma Physics and Magnetohydrodynamics (P108)', 'PlasmaPh', 'C'),
 	'P470': new Course('Quantum Field Theory II (P109)', 'QFT2', 'C'),
 	'P471': new Course('Quantum Information and Quantum Computation (P107)', 'QIQC', 'E'),
 
