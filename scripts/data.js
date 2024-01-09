@@ -57,7 +57,7 @@ let courses = {
 
 	'C402': new Course('Chemical Rate Processes (LH4)', 'ChemRate', 'D'),
 
-	'C554': new Course('Crystallography (C2)', 'Crystallo', 'B'),
+	'C554': new Course('Crystallography (C2)', 'Crystallo', 'A'),
 	'C556': new Course('Advanced Bio-Inorganic Chemistry (LH1)', 'BioInorgChem', 'F'),
 	'C559': new Course('Supramolecular Chemistry (C3)', 'Supra', 'A'),
 	'C565': new Course('Advanced Organic Chemistry (C4)', 'AdvOrgChem', 'C'),
