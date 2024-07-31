@@ -1,4 +1,4 @@
-let year = '2023';
+let year = '2024';
 let semester = 'Fall';
 
 function School(code, name, courses) {
@@ -30,97 +30,120 @@ let schools = {
 let courses = {
 	// always use A1, A2, ... for degenerates of slot A
 	/* Biology */
-	'B201': new Course('Microbiology (B3)', 'MicroBio', 'D'),
-	'B202': new Course('Biochemistry (LH2)', 'Biochem', 'B'),
+	'B201': new Course('Microbiology (B1)', 'MicroBio', 'A'),
+	'B202': new Course('Biochemistry (B1)', 'Biochem', 'B'),
 
-	'B301': new Course('Animal Physiology (LH3)', 'AnimPhys', 'D'),
-	'B302': new Course('Plant Physiology (LH3)', 'PlantPhys', 'E'),
-	'B303': new Course('Ecology (LH3)', 'Ecology', 'F'),
+	'B301': new Course('Animal Physiology (B2)', 'Animal Physio', 'B'),
+	'B302': new Course('Plant Physiology (B2)', 'Plant Physio', 'C'),
+	'B303': new Course('Ecology (LH3)', 'Ecology', 'A'),
+	'B353': new Course('Plant Developmental Biology (B2)', 'Plant DevBio', 'E'),
+	'B354': new Course('Neurobiology (B4)', 'Neuro', 'C'),
 
-	'B402': new Course('Developmental Biology (LH2)', 'DevBio', 'F'),
+	'B402': new Course('Developmental Biology (LH2)', 'DevBio', 'B'),
 	'B405': new Course('Biotechniques (LH2)', 'Biotech', 'A'),
-	'B406': new Course('Introductory Biophysics (LH2)', 'Biophys', 'D'),
-	'B464': new Course('Neurobiology (B5)', 'Neuro', 'C'),
-	'B465': new Course('Structural Biology (B5)', 'StrBio', 'B'), 
+	'B406': new Course('Introductory Biophysics (LH3)', 'Biophys', 'C'),
+	'B451': new Course('Advanced Cell Biology (B1)', 'Adv CellBio', 'D'),
+	'B455': new Course('Enzymology (B5)', 'Enzymo', 'C'),
+	'B466': new Course('Model organisms in Biomedical Research (B5)','BioMed','B'),
+	// 'B465': new Course('Structural Biology (B5)', 'StrBio', 'B'),
 
-	'B552': new Course('Advanced Immunology (B4)', 'AdvImmuno', 'C'), 
+	'B551': new Course('Advanced Molecular Biology (B3)', 'Adv MolBio', 'D'), 
+	'B552': new Course('Advanced Immunology (B4)', 'Adv Immuno', 'A'), 
+	'B555': new Course('Advanced Genetics (B6)', 'Adv Genetics', 'B'), 
 
 	/* Chemistry */
-	'C201': new Course('Basic Inorganic Chemistry (LH2)', 'Inorganic', 'E'),
-	'C203': new Course('Reaction Mechanism in Organic Chemistry (LH4)', 'Organic', 'A'),
-	'C207': new Course('Mathematical Methods for Chemists (C6)', 'MMC', 'C'),
+	'C201': new Course('Basic Inorganic Chemistry (C6)', 'Inorganic', 'D'),
+	'C203': new Course('Reaction Mechanism in Organic Chemistry (LH4)', 'Organic', 'C'),
+	'C207': new Course('Mathematical Methods for Chemists (C6)', 'MMC', 'E'),
 
-	'C301': new Course('Physical Organic Chemistry (LH3)', 'POC', 'B'),
-	'C302': new Course('Molecular Spectroscopy and Group Theory (LH3)', 'MolSpec', 'A'),
-	'C307': new Course('Thermodynamics and Electrochemistry (LH3)', 'Thermo', 'C'),
+	'C301': new Course('Physical Organic Chemistry (C1)', 'POC', 'D'),
+	'C302': new Course('Molecular Spectroscopy and Group Theory (C5)', 'MolSpec', 'B'),
+	'C307': new Course('Thermodynamics and Electrochemistry (LH4)', 'Thermo', 'A'),
 
-	'C401': new Course('Physical Methods in Chemsitry -II (LH4)', 'PMC2', 'B'),
-	'C403': new Course('Chemistry of Heterocycles and Natural Products (C6)', 'Heterocycles', 'D'),
+	'C401': new Course('Physical Methods in Chemsitry-II (C4)', 'PMC2', 'B'),
+	'C403': new Course('Chemistry of Heterocycles and Natural Products (C5)', 'Hetero cycles', 'E'),
 
-	'C552': new Course('Solid State Chemistry (LH4)', 'SSC', 'C'),
-	'C557': new Course('Nuclear Magnetic Resonance (C5)', 'NMR', 'A'),
-	'C568': new Course('Advanced Fluoroscence Spectroscopy (LH4)', 'FluorSpec', 'E'),
-	'C572': new Course('Frontiers in Organic Synthesis (C1)', 'OrgSynth', 'A'),
+	// 'C552': new Course('Solid State Chemistry (LH4)', 'SSC', 'C'),
+	// 'C557': new Course('Nuclear Magnetic Resonance (C5)', 'NMR', 'A'),
+	'C560': new Course('Chemistry of Nanomaterials (C6)', 'Nano', 'A'),
+	'C568': new Course('Advanced Fluoroscence Spectroscopy (LH1)', 'Fluoro Spec', 'A'),
+	'C572': new Course('Frontiers in Organic Synthesis (C2)', 'OrgSynth', 'B'),
 
 	/* Computer Science */
 	'CS201': new Course('Theory of Computation (M1)', 'ToC', 'J'),
-	'CS301': new Course('Design and Analysis of Algorithm (P126)', 'DAA', 'A'),
-	'CS461': new Course('Advanced Machine Learning (M5)', 'AdvML', 'J'),
-	'CS452 (K1)': new Course('Algorithmic Coding Theory (M5)', 'ACT', 'K1'),
-	'CS452 (K2)': new Course('Algorithmic Coding Theory (M5)', 'ACT', 'K2'),
+	'CS301': new Course('Design and Analysis of Algorithm (M4)', 'DAA', 'K'),
+	'CS452': new Course('Algorithmic Coding Theory (M4)', 'AlgoCode', 'B'),
+	'CS425': new Course('Randomized Algorithms (M5)', 'RA', 'K'),
+	'CS453': new Course('Compexity Theory (M5)', 'CompTheory', 'A'),
+	// 'CS461': new Course('Advanced Machine Learning (M5)', 'AdvML', 'J'),
+	// 'CS452': new Course('Algorithmic Coding Theory (M5)', 'ACT', 'K'),
 
 	/* Humanities */
-	'H238': new Course('Life & Communication in Urban (M4)', 'Urban', 'A'),
+	'H209': new Course('Speculative Fiction (LH5)', 'Spec Fiction', 'K1'),
 	'H225': new Course('Introduction to Psychology (LH5)', 'Psycho', 'K2'),
-	'H235': new Course('Sociology of Science & Technology (LH5)', 'Socio', 'K1'),
+	'H235': new Course('Sociology of Science & Technology (LH4)', 'Socio', 'J2'),
+	'H238': new Course('Life & Communication in Urban (LH4)', 'Urban', 'J1'),
 
 	/* Mathematics */
-	'M201': new Course('Real Analysis (M1)', 'Real', 'E'),
+	'M201': new Course('Real Analysis (M1)', 'Real', 'A'),
 	'M203': new Course('Discrete Mathematics (M1)', 'DM', 'B'),
-	'M205': new Course('Linear Algebra (M1)', 'LinAl', 'A'),
+	'M205': new Course('Linear Algebra (M1)', 'LinAl', 'C'),
 
-	'M302': new Course('Rings and Modules (M2)', 'R&M', 'B'),
-	'M303': new Course('Differential Equation (M2)', 'DE', 'D'),
-	'M305*': new Course('Number Theory (M2)', 'NT', 'F'),
+	'M302': new Course('Rings and Modules (M2)', 'R&M', 'A'),
+	'M303': new Course('Differential Equation (M2)', 'DE', 'E'),
+	'M305': new Course('Number Theory (M2)', 'NT', 'B'),
 	'M306': new Course('Calculus of Several Variables (M2)', 'CSV', 'C'),
-	'M305': new Course('Statistics (M5)', 'Stats', 'B'),
+	// 'M305': new Course('Statistics (M5)', 'Stats', 'B'),
 
-	'M401': new Course('Functional Analysis (M3)', 'FA', 'C'),
-	'M403': new Course('Commutative Algebra (M3)', 'CA', 'D'),
-	'M405': new Course('Topology (M3)', 'Topology', 'E'),
-	'M484': new Course('Commutative Algebra (M5)', 'CA', 'D'),
-	'M466': new Course('Measure Theory (M5)', 'MT', 'A'),
-	'M464': new Course('Information and Coding Theory (M4)', 'ICT', 'G'),
-	'M459*': new Course('Statistics (M4)', 'Stat', 'B'),
-	'M458': new Course('Algebraic Number Theory (M4)', 'ANT', 'I'),
+	'M401': new Course('Functional Analysis (M3)', 'FA', 'F'),
+	'M405': new Course('Topology (M3)', 'Topology', 'D'),
+	'M484': new Course('Commutative Algebra (M3)', 'CA', 'B'),
+	'M479': new Course('Random Graphs (M3)', 'RG', 'C'),
+	'M453': new Course('Advanced Linear Algebra (M3)', 'ALA', 'A'),
+	'M476': new Course('Lie Algebras (M3)', 'LA', 'E'),
+	'M478': new Course('Advanced Partial Differential Equations (M2)', 'APDE', 'D'),
+	// 'M466': new Course('Measure Theory (M5)', 'MT', 'A'),
+	// 'M464': new Course('Information and Coding Theory (M4)', 'ICT', 'G'),
+	// 'M459*': new Course('Statistics (M4)', 'Stat', 'B'),
+	// 'M458': new Course('Algebraic Number Theory (M4)', 'ANT', 'I'),
 
-	'M562': new Course('Brownian Motion and Stochastic Calculus (M5)', 'BM&SC', 'H'),
-	'M556*': new Course('Lie Groups and Lie Algebra I (M4)', 'LG&LA', 'H'),
+	// 'M562': new Course('Brownian Motion and Stochastic Calculus (M5)', 'BM&SC', 'H'),
+	// 'M556*': new Course('Lie Groups and Lie Algebra I (M4)', 'LG&LA', 'H'),
 
 	/* Physics */
-	'P201': new Course('Classical Mechanics I (P107)', 'CM1', 'E'),
-	'P202': new Course('Mathematical Methods I (LH4)', 'MM1', 'F'),
-	'P207': new Course('Linear Optics (P126)', 'LinOptics', 'B'),
-	'P245': new Course('Basic Electronics Theory and Lab (P126)', 'ElecLab', 'D'),
+	'P201': new Course('Classical Mechanics I (P127)', 'CM1', 'A'),
+	'P202': new Course('Mathematical Methods I (P127)', 'MM1', 'C'),
+	'P207': new Course('Linear Optics (P127)', 'Lin Optics', 'B'),
+	'P245': new Course('Basic Electronics Theory and Lab (P127)', 'Electro Lab', 'D'),
 
-	'P302': new Course('Statistical Mechanics (P107)', 'StatMech', 'C'),
-	'P303': new Course('Quantum Mechanics - II (P107)', 'QM2', 'F'),
-	'P304': new Course('Special Theory of Relativity (P107)', 'STR', 'D'),
+	'P302': new Course('Statistical Mechanics (P126)', 'StatMech', 'E'),
+	'P303': new Course('Quantum Mechanics - II (P126)', 'QM2', 'D'),
+	'P304': new Course('Special Theory of Relativity (P126)', 'STR', 'C'),
 
-	'P401': new Course('Classical Mechanics II: Mechanics of Continuous Media (P127)', 'CM2', 'E'),
-	'P405': new Course('Atoms, molecules and Radiation (P127)', 'AMR', 'F'),
-
-	'P451': new Course('Advanced Solid State Physics (P107)', 'ASS', 'B'),
-	'P453': new Course('Quantum Field Theory I (P109)', 'QFT1', 'C'),
-	'P462': new Course('Introduction to Quantum Optics (P108)', 'IQO', 'C'),
-	'P473': new Course('Experimental Techniques (LH1)', 'ExpTech', 'A'),
-	'P474': new Course('Introduction to Cosmology (P127)', 'Cosmo', 'D'),
+	'P401': new Course('Classical Mechanics II: Mechanics of Continuous Media (P107)', 'CM2', 'F'),
+	'P405': new Course('Atoms, molecules and Radiation (P107)', 'AMR', 'E'),
+	
+	'P453': new Course('Quantum Field Theory I (P107)', 'QFT1', 'C'),
+	// 'P451': new Course('Advanced Solid State Physics (P107)', 'ASS', 'B'),
+	// 'P462': new Course('Introduction to Quantum Optics (P108)', 'IQO', 'C'),
+	// 'P473': new Course('Experimental Techniques (LH1)', 'ExpTech', 'A'),
+	// 'P474': new Course('Introduction to Cosmology (P127)', 'Cosmo', 'D'),
+	'P460': new Course('Many Particle Physics (P126)', 'Many Particle', 'F'),
+	'P463': new Course('Astronomy and Astrophysics (P127)', 'Astro', 'F'),
+	'P469': new Course('Density Functional Theory of Atoms, Molecules and Solids (P156)', 'DFT', 'A'),
+	'P472': new Course('Experimental High Energy Physics (P126)', 'Expt HEP', 'B'),
+	'P476': new Course('Non-Equilibrium Statistical Mechanics (P127)', 'NE StatMech', 'D'),
 
 	/* CMRP */
-	'R111': new Course('Classical Mechanics (CL-001)', 'CM', 'A'),
-	'R112': new Course('Statistical Mechanics and Thermodynamics (CL-001)', 'StatMech&Thermo', 'B'),
-	'R113': new Course('Mathematical Physics (CL-001)', 'MP', 'C'),
-	'R114': new Course('Electrodynamics (CL-001)', 'Electro', 'D'),
+	'11-PHYS26-511-C': new Course('Classical Mechanics (CL-001)', 'CM', 'A'),
+	'11-PHYS26-512-C': new Course('Statistical Mechanics and Thermodynamics (CL-001)', 'SM& Thermo', 'B'),
+	'11-PHYS26-513-C': new Course('Mathematical Physics (CL-001)', 'MP', 'C'),
+	'11-PHYS26-514-C': new Course('Electrodynamics (CL-001)', 'Electro', 'D'),
+
+	'R211': new Course('Radiation Physics and Radiation Generators (CL-002)', 'RadGen', 'A'),
+	'R212': new Course('Radiological Mathematics (CL-002)', 'RadMath', 'B'),
+	'R213': new Course('Radiation Dosimetry and Standardization (CL-002)', 'RadDosi', 'C'),
+	'R214': new Course('Radiation Detectors and Instrumentation (CL-002)', 'RadDetec', 'D'),
 };
 
 for (let course in courses) {
