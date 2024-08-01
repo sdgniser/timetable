@@ -128,11 +128,11 @@ let courses = {
 	// 'P462': new Course('Introduction to Quantum Optics (P108)', 'IQO', 'C'),
 	// 'P473': new Course('Experimental Techniques (LH1)', 'ExpTech', 'A'),
 	// 'P474': new Course('Introduction to Cosmology (P127)', 'Cosmo', 'D'),
-	'P460': new Course('Many Particle Physics (P126)', 'Many Particle', 'D'),
-	'P463': new Course('Astronomy and Astrophysics (P127)', 'Astro', 'F'),
+	'P460': new Course('Many Particle Physics (P107)', 'Many Particle', 'D'),
+	'P463': new Course('Astronomy and Astrophysics (P108)', 'Astro', 'D'),
 	'P469': new Course('Density Functional Theory of Atoms, Molecules and Solids (P156)', 'DFT', 'A'),
 	'P472': new Course('Experimental High Energy Physics (P126)', 'Expt HEP', 'B'),
-	'P476': new Course('Non-Equilibrium Statistical Mechanics (P127)', 'NE StatMech', 'D'),
+	'P476': new Course('Non-Equilibrium Statistical Mechanics (P127)', 'NE StatMech', 'J'),
 
 	/* CMRP */
 	'11-PHYS26-511-C': new Course('Classical Mechanics (CL-001)', 'CM', 'A'),
