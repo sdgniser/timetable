@@ -53,8 +53,8 @@ let courses = {
 
 	/* Chemistry */
 	'C201': new Course('Basic Inorganic Chemistry (C6)', 'Inorganic', 'D'),
-	'C203': new Course('Reaction Mechanism in Organic Chemistry (LH4)', 'Organic', 'C'),
-	'C207': new Course('Mathematical Methods for Chemists (C6)', 'MMC', 'E'),
+	'C203': new Course('Reaction Mechanism in Organic Chemistry (C6)', 'Organic', 'E'),
+	'C207': new Course('Mathematical Methods for Chemists (LH4)', 'MMC', 'C'),
 
 	'C301': new Course('Physical Organic Chemistry (C1)', 'POC', 'D'),
 	'C302': new Course('Molecular Spectroscopy and Group Theory (C5)', 'MolSpec', 'B'),
