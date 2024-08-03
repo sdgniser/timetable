@@ -58,7 +58,7 @@ let courses = {
 
 	'C301': new Course('Physical Organic Chemistry (C1)', 'POC', 'D'),
 	'C302': new Course('Molecular Spectroscopy and Group Theory (C5)', 'MolSpec', 'B'),
-	'C307': new Course('Thermodynamics and Electrochemistry (LH4)', 'Thermo', 'F'),
+	'C307': new Course('Thermodynamics and Electrochemistry (LH4)', 'Thermo', 'A'),
 
 	'C401': new Course('Physical Methods in Chemistry-II (C4)', 'PMC2', 'B'),
 	'C403': new Course('Chemistry of Heterocycles and Natural Products (C5)', 'Hetero cycles', 'E'),
