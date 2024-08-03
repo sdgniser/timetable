@@ -60,13 +60,13 @@ let courses = {
 	'C302': new Course('Molecular Spectroscopy and Group Theory (C5)', 'MolSpec', 'B'),
 	'C307': new Course('Thermodynamics and Electrochemistry (LH4)', 'Thermo', 'F'),
 
-	'C401': new Course('Physical Methods in Chemsitry-II (C4)', 'PMC2', 'B'),
+	'C401': new Course('Physical Methods in Chemistry-II (C4)', 'PMC2', 'B'),
 	'C403': new Course('Chemistry of Heterocycles and Natural Products (C5)', 'Hetero cycles', 'E'),
 
 	// 'C552': new Course('Solid State Chemistry (LH4)', 'SSC', 'C'),
 	// 'C557': new Course('Nuclear Magnetic Resonance (C5)', 'NMR', 'A'),
 	'C560': new Course('Chemistry of Nanomaterials (C6)', 'Nano', 'A'),
-	'C568': new Course('Advanced Fluoroscence Spectroscopy (LH1)', 'Fluoro Spec', 'A'),
+	'C568': new Course('Advanced Fluorescence Spectroscopy (LH1)', 'Fluoro Spec', 'A'),
 	'C572': new Course('Frontiers in Organic Synthesis (C2)', 'OrgSynth', 'B'),
 
 	/* Computer Science */
@@ -74,7 +74,7 @@ let courses = {
 	'CS301': new Course('Design and Analysis of Algorithm (M4)', 'DAA', 'K'),
 	'CS452': new Course('Algorithmic Coding Theory (M4)', 'AlgoCode', 'B'),
 	'CS425': new Course('Randomized Algorithms (M5)', 'RA', 'K'),
-	'CS453': new Course('Compexity Theory (M5)', 'CompTheory', 'A'),
+	'CS453': new Course('Complexity Theory (M5)', 'CompTheory', 'A'),
 	// 'CS461': new Course('Advanced Machine Learning (M5)', 'AdvML', 'J'),
 	// 'CS452': new Course('Algorithmic Coding Theory (M5)', 'ACT', 'K'),
 
@@ -128,7 +128,7 @@ let courses = {
 	// 'P462': new Course('Introduction to Quantum Optics (P108)', 'IQO', 'C'),
 	// 'P473': new Course('Experimental Techniques (LH1)', 'ExpTech', 'A'),
 	// 'P474': new Course('Introduction to Cosmology (P127)', 'Cosmo', 'D'),
-	'P460': new Course('Many Particle Physics (P107)', 'Many Particle', 'D'),
+	'P460': new Course('Many-Particle Physics (P107)', 'Many Particle', 'D'),
 	'P463': new Course('Astronomy and Astrophysics (P108)', 'Astro', 'D'),
 	'P469': new Course('Density Functional Theory of Atoms, Molecules and Solids (P156)', 'DFT', 'A'),
 	'P472': new Course('Experimental High Energy Physics (P126)', 'Expt HEP', 'B'),
