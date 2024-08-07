@@ -87,7 +87,7 @@ let courses = {
 	/* Mathematics */
 	'M201': new Course('Real Analysis (M1)', 'Real', 'A'),
 	'M203': new Course('Discrete Mathematics (M1)', 'DM', 'B'),
-	'M205': new Course('Linear Algebra (M1)', 'LinAl', 'C'),
+	'M205': new Course('Linear Algebra (M1)', 'LinAl', 'D'),
 
 	'M302': new Course('Rings and Modules (M2)', 'R&M', 'A'),
 	'M303': new Course('Differential Equation (M2)', 'DE', 'E'),
@@ -114,7 +114,7 @@ let courses = {
 	'P201': new Course('Classical Mechanics I (P127)', 'CM1', 'A'),
 	'P202': new Course('Mathematical Methods I (P127)', 'MM1', 'C'),
 	'P207': new Course('Linear Optics (P127)', 'Lin Optics', 'B'),
-	'P245': new Course('Basic Electronics Theory and Lab (P127)', 'Electro Lab', 'D'),
+	'P245': new Course('Basic Electronics Theory and Lab (P127)', 'Electro Lab', 'F'),
 
 	'P302': new Course('Statistical Mechanics (P126)', 'StatMech', 'E'),
 	'P303': new Course('Quantum Mechanics - II (P126)', 'QM2', 'D'),
