@@ -1,157 +1,164 @@
 <!DOCTYPE html>
 <html lang="en-US">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="style.css" rel="stylesheet">
-		
-		<title>
-			Timetable Generator
-		</title>
-	</head>
 
-	<body>
-		<h1>NISER Timetable Generator</h1>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="style.css" rel="stylesheet">
 
-		<div id="wrapper">
-			<!-- Left pane starts -->
-			<div id="controls">
-				<h2>Select Courses</h2>
-				<div id="school-tabs" class="buttons">
-				</div>
+	<title>
+		Timetable Generator
+	</title>
+</head>
 
-				<div id="school-list">
-				</div>
+<body>
+	<h1>NISER Timetable Generator</h1>
 
-				<div class="buttons">
-					<div>
-						<input type="checkbox" id="color" checked>
-						<label for="color">Add Colors?</label><br>
-					</div>
-					<button type="button" id="gen-code">Generate with Codes</button>
-					<button type="button" id="gen-nick">Generate with Nicknames</button>
-					<button id="reset">Reset</button>
-					<button type="button" id="pdf">Download PDF</button>
-				</div>
+	<div id="wrapper">
+		<!-- Left pane starts -->
+		<div id="controls">
+			<h2>Select Courses</h2>
+			<div id="school-tabs" class="buttons">
 			</div>
-			<!-- Left pane ends here -->
 
-			<!-- Right pane starts -->
-			<div id="preview">
-				<h2>Generated Timetable</h2>
-				<div id="tab">
-					<!--K1, K2 and J1, J2 used for SHSS courses. Hence they also have J and K class for non SHSS cources.-->
-					<table>
-						<tr>
-							<th scope="col">Day</th>
-							<th scope="col">08:30</th>
-							<th scope="col">09:30</th>
-							<th scope="col">10:30</th>
-							<th scope="col">11:30</th>
-							<th scope="col">12:30</th>
-							<th scope="col">13:30</th>
-							<th scope="col">14:30</th>
-							<th scope="col">15:30</th>
-							<th scope="col">16:30</th>
-							<th scope="col">17:30</th>
-							<th scope="col">18:30</th>
-						</tr>
-
-						<tr>
-							<th scope="row">Monday</th>
-							<td class="A">A</td>
-							<td class="B">B</td>
-							<td class="C">C</td>
-							<td class="D">D</td>
-							<td class="lunch">Lunch Break</td>
-							<td class="E">E</td>
-							<td class="G">G</td>
-							<td class="H">H</td>
-							<td class="I">I</td>
-							<td class="J1 J">J</td>
-							<td class="K1 K">K</td>
-						</tr>
-
-						<tr>
-							<th scope="row">Tuesday</th>
-							<td class="F">F</td>
-							<td class="A">A</td>
-							<td class="B">B</td>
-							<td class="C">C</td>
-							<td class="lunch">Lunch Break</td>
-							<td class="D">D</td>
-							<td class="G">G</td>
-							<td class="H">H</td>
-							<td class="I">I</td>
-							<td class="K2 K">K</td>
-							<td class="J2 J">J</td>
-						</tr>
-
-						<tr>
-							<th scope="row">Wednesday</th>
-							<td class="E">E</td>
-							<td class="F">F</td>
-							<td class="A">A</td>
-							<td class="B">B</td>
-							<td class="lunch">Lunch Break</td>
-							<td class="C">C</td>
-							<td class="G">G</td>
-							<td class="H">H</td>
-							<td class="I">I</td>
-							<td class="J1 J">J</td>
-							<td class="K1 K">K</td>
-						</tr>
-
-						<tr>
-							<th scope="row">Thursday</th>
-							<td class="D">D</td>
-							<td class="E">E</td>
-							<td class="F">F</td>
-							<td class="A">A</td>
-							<td class="lunch">Lunch Break</td>
-							<td class="B">B</td>
-							<td class="G">G</td>
-							<td class="H">H</td>
-							<td class="I">I</td>
-							<td class="K2 K">K</td>
-							<td class="J2 J">J</td>
-						</tr>
-
-						<tr>
-							<th scope="row">Friday</th>
-							<td class="C">C</td>
-							<td class="D">D</td>
-							<td class="E">E</td>
-							<td class="F">F</td>
-							<td class="lunch">Lunch Break</td>
-							<td class="">No Class</td>
-							<td class="">No Class</td>
-							<td class="">No Class</td>
-							<td class="">No Class</td>
-							<td class="">No Class</td>
-							<td class="">No Class</td>
-						</tr>
-					</table>
-				</div>
-				<h2 id="h2leg" class="hidden">Legend</h2>
-				<ul id="legend">
-				</ul>
+			<div id="school-list">
 			</div>
-			<!-- Right pane ends here -->
+
+			<div class="buttons">
+				<div>
+					<input type="checkbox" id="color" checked>
+					<label for="color">Add Colors?</label><br>
+				</div>
+				<button type="button" id="gen-code">Generate with Codes</button>
+				<button type="button" id="gen-nick">Generate with Nicknames</button>
+				<button id="reset">Reset</button>
+				<button type="button" id="pdf">Download PDF</button>
+				<button type="button" id="ics">Download ICS</button>
+				<p>ICS files can be added to Google (or any other) Calendar. Currently this feature only works when you
+					generate with codes. If you want to generate the timetable pdf with nicknames, do so after the ICS
+					file is downloaded. Will fix soon.</p>
+			</div>
 		</div>
+		<!-- Left pane ends here -->
 
-		<footer>
-			<ul>
-        <li><a href="https://github.com/sdgniser/timetable/issues/new">Report Issue/Error</a></li>
-				<li><a href="https://www.github.com/sdgniser/timetable">Source Code</a></li>
-				<li><a href="https://sdgniser.github.io">NISER SDG</a></li>
+		<!-- Right pane starts -->
+		<div id="preview">
+			<h2>Generated Timetable</h2>
+			<div id="tab">
+				<!--K1, K2 and J1, J2 used for SHSS courses. Hence they also have J and K class for non SHSS cources.-->
+				<table>
+					<tr>
+						<th scope="col">Day</th>
+						<th scope="col">08:30</th>
+						<th scope="col">09:30</th>
+						<th scope="col">10:30</th>
+						<th scope="col">11:30</th>
+						<th scope="col">12:30</th>
+						<th scope="col">13:30</th>
+						<th scope="col">14:30</th>
+						<th scope="col">15:30</th>
+						<th scope="col">16:30</th>
+						<th scope="col">17:30</th>
+						<th scope="col">18:30</th>
+					</tr>
+
+					<tr>
+						<th scope="row">Monday</th>
+						<td class="A">A</td>
+						<td class="B">B</td>
+						<td class="C">C</td>
+						<td class="D">D</td>
+						<td class="lunch">Lunch Break</td>
+						<td class="E">E</td>
+						<td class="G">G</td>
+						<td class="H">H</td>
+						<td class="I">I</td>
+						<td class="J1 J">J</td>
+						<td class="K1 K">K</td>
+					</tr>
+
+					<tr>
+						<th scope="row">Tuesday</th>
+						<td class="F">F</td>
+						<td class="A">A</td>
+						<td class="B">B</td>
+						<td class="C">C</td>
+						<td class="lunch">Lunch Break</td>
+						<td class="D">D</td>
+						<td class="G">G</td>
+						<td class="H">H</td>
+						<td class="I">I</td>
+						<td class="K2 K">K</td>
+						<td class="J2 J">J</td>
+					</tr>
+
+					<tr>
+						<th scope="row">Wednesday</th>
+						<td class="E">E</td>
+						<td class="F">F</td>
+						<td class="A">A</td>
+						<td class="B">B</td>
+						<td class="lunch">Lunch Break</td>
+						<td class="C">C</td>
+						<td class="G">G</td>
+						<td class="H">H</td>
+						<td class="I">I</td>
+						<td class="J1 J">J</td>
+						<td class="K1 K">K</td>
+					</tr>
+
+					<tr>
+						<th scope="row">Thursday</th>
+						<td class="D">D</td>
+						<td class="E">E</td>
+						<td class="F">F</td>
+						<td class="A">A</td>
+						<td class="lunch">Lunch Break</td>
+						<td class="B">B</td>
+						<td class="G">G</td>
+						<td class="H">H</td>
+						<td class="I">I</td>
+						<td class="K2 K">K</td>
+						<td class="J2 J">J</td>
+					</tr>
+
+					<tr>
+						<th scope="row">Friday</th>
+						<td class="C">C</td>
+						<td class="D">D</td>
+						<td class="E">E</td>
+						<td class="F">F</td>
+						<td class="lunch">Lunch Break</td>
+						<td class="">No Class</td>
+						<td class="">No Class</td>
+						<td class="">No Class</td>
+						<td class="">No Class</td>
+						<td class="">No Class</td>
+						<td class="">No Class</td>
+					</tr>
+				</table>
+			</div>
+			<h2 id="h2leg" class="hidden">Legend</h2>
+			<ul id="legend">
 			</ul>
-		</footer>
+		</div>
+		<!-- Right pane ends here -->
+	</div>
 
-		<script src="scripts/jspdf.umd.min.js"></script>
-		<script src="scripts/jspdf.plugin.autotable.js"></script>
-		<script src="scripts/html2canvas.min.js"></script>
-		<script src="scripts/data.js"></script>
-		<script src="scripts/main.js"></script>
-	</body>
+	<footer>
+		<ul>
+			<li><a href="https://github.com/sdgniser/timetable/issues/new">Report Issue/Error</a></li>
+			<li><a href="https://www.github.com/sdgniser/timetable">Source Code</a></li>
+			<li><a href="https://sdgniser.github.io">NISER SDG</a></li>
+		</ul>
+	</footer>
+
+	<script src="scripts/jspdf.umd.min.js"></script>
+	<script src="scripts/jspdf.plugin.autotable.js"></script>
+	<script src="scripts/html2canvas.min.js"></script>
+	<script src="scripts/ics.min.js"></script>
+	<script src="scripts/data.js"></script>
+	<script src="scripts/main.js"></script>
+</body>
+
 </html>
