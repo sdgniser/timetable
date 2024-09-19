@@ -225,10 +225,6 @@ function formatted_time_string(day, time) {
 
 function generateICS() {
     var cal = ics();
-    // cal.addEvent(subject, description, location, begin, end, rrule = {});
-    // cal.download(filename);
-
-
 
     console.log("ICS file generated");
     console.log(occupiedSlotsGlob);  // list of selected course codes
@@ -249,7 +245,7 @@ function generateICS() {
         let [courseName, courseNick, courseSlot] = Object.values(courses[courseCode]);
         console.log(`courseName=${courseName},\ncourseNick=${courseNick},\ncourseSlot=${courseSlot},\ncourseCode=${courseCode}`);
 
-            let subject = `${courseNick}: ${courseName}`;
+            let subject = `${courseCode}: ${courseName}`;
             let description = `Class for ${courseNick} at slot ${courseSlot}`;
         slots[courseSlot].forEach(slot => {
             let [day, start, end] = slot;
