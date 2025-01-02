@@ -75,7 +75,7 @@ let courses = {
     'M204': new Course('Metric Spaces (M3)', 'MetSpace', 'C'),
     'M206': new Course('Probability Theory (M3)', 'PT', 'B'),
 
-    'M301': new Course('Lebesgue Integration (M1)', 'Lebesgue', 'G'),
+    'M301': new Course('Lebesgue Integration (M1)', 'Lebesgue', 'B'),
     'M307': new Course('Field Theory (M1)', 'FT', 'F'),
     'M308': new Course('Complex Analysis (M1)', 'CA', 'D'),
     'M309': new Course('Graph Theory (M1)', 'Graph', 'H'),
