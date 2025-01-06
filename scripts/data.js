@@ -44,7 +44,7 @@ let courses = {
     'B462': new Course('Endocrinology (B6)', 'Endo', 'D'),
     'B554': new Course('Cancer Biology (B6)', 'CancerBio', 'C'),
     'B460': new Course('Virology (LH02)', 'Virology', 'E'),
-    'B465': new Course('Structural Biology (B5)', 'StructBio', 'A'),
+    'B465': new Course('Structural Biology (B5)', 'StructBio', 'D'),
 
     // Chemistry
     'C204': new Course('Reagents in Organic Synthesis (LH3)', 'Organic', 'E'),
