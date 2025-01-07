@@ -44,7 +44,7 @@ let courses = {
     'B462': new Course('Endocrinology (B6)', 'Endo', 'D'),
     'B554': new Course('Cancer Biology (B6)', 'CancerBio', 'C'),
     'B460': new Course('Virology (LH02)', 'Virology', 'E'),
-    'B465': new Course('Structural Biology (B5)', 'StructBio', 'D'),
+    'B465': new Course('Structural Biology (B5)', 'StructBio', 'E'),
 
     // Chemistry
     'C204': new Course('Reagents in Organic Synthesis (LH3)', 'Organic', 'E'),
@@ -72,7 +72,7 @@ let courses = {
 
     // Mathematics
     'M202': new Course('Group Theory (M3)', 'GrpTheory', 'F'),
-    'M204': new Course('Metric Spaces (M3)', 'MetSpace', 'C'),
+    'M204': new Course('Metric Spaces (M3)', 'MetSpace', 'A'),
     'M206': new Course('Probability Theory (M3)', 'PT', 'B'),
 
     'M301': new Course('Lebesgue Integration (M1)', 'Lebesgue', 'B'),
