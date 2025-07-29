@@ -1,5 +1,5 @@
-let schoolTabs = document.querySelector('#school-tabs');
-let schoolList = document.querySelector('#school-list');
+let schoolTabs = document.getElementById('school-tabs');
+let schoolList = document.getElementById('school-list');
 
 let occupiedSlotsGlob = [];
 
@@ -10,9 +10,9 @@ for (let school in schools) {
     // Making the buttons for each school
     let schoolTab = document.createElement('button');
     schoolTab.textContent = school;
-    schoolTab.addEventListener('click', function () {
-        document.querySelectorAll('.school').forEach(function (b) { b.classList.add('hidden') });  // Hide all schools
-        let schoolCourses = document.querySelector('#' + school);  // get the selected school
+    schoolTab.addEventListener('click', () => {
+        document.querySelectorAll('.school').forEach(b => b.classList.add('hidden'));  // Hide all schools
+        let schoolCourses = document.getElementById(school);  // get the selected school
         schoolCourses.classList.remove('hidden');  // Show the selected school
         schoolCourses.classList.add('visible');  // Show the selected school
     });
@@ -21,37 +21,32 @@ for (let school in schools) {
 
     let schoolDiv = document.createElement('div');
     schoolDiv.classList.add('school');
-    school !== 'SCS' ? schoolDiv.classList.add('hidden') : null;
-    schoolDiv.setAttribute('id', school);
+    if (school !== 'SCS') schoolDiv.classList.add('hidden'); // only SCS is visible
+    schoolDiv.id = school;
 
     let schoolHeader = document.createElement('h3');
     schoolHeader.textContent = schools[school].name;
 
     let schoolUl = document.createElement('ul');
     schoolList.appendChild(schoolDiv);
-    schoolDiv.appendChild(schoolHeader);
-    schoolDiv.appendChild(schoolUl);
+    schoolDiv.append(schoolHeader, schoolUl);
 
-    schools[school].courses.forEach(function (course) {
-        let slot = courses[course].slot;
-
+    schools[school].courses.forEach(course => {
         let courseLabel = document.createElement('label');
-        courseLabel.setAttribute('for', course);
-        courseLabel.textContent = course;
-        courseLabel.textContent += ": " + courses[course].name;
+        courseLabel.htmlFor = course;
+        courseLabel.textContent = course + ": " + courses[course].name;
         // courseLabel.innerHTML += "<strong>(" + courses[course].slot + ")</strong>";
 
         let courseLi = document.createElement('li');
         courseLi.classList.add('course');
 
         let courseCheckBox = document.createElement('input');
-        courseCheckBox.setAttribute('type', 'checkbox');
-        courseCheckBox.setAttribute('value', course);
-        courseCheckBox.setAttribute('id', course);
+        courseCheckBox.type = 'checkbox';
+        courseCheckBox.id = courseCheckBox.value = course;
 
+        
         schoolUl.appendChild(courseLi);
-        courseLi.appendChild(courseCheckBox);
-        courseLi.appendChild(courseLabel);
+        courseLi.append(courseCheckBox, courseLabel);
     });
 }
 
@@ -59,16 +54,10 @@ for (let school in schools) {
 /* A function that cleans the cells of the timetable */
 function clean() {
     let slotsInTimetable = document.querySelectorAll('td:not(.lunch)');
-
-    slotsInTimetable.forEach(function (slot) {
+    document.getElementById("legend").textContent = "";// Cleans legend
+    
+    slotsInTimetable.forEach(slot => {// Removes colors from cells
         slot.textContent = '';
-    });
-    // Cleans legend
-    document.getElementById("legend").textContent = "";
-
-    // Removes colors from cells
-    let slots = document.getElementsByTagName("td");
-    slotsInTimetable.forEach(slot => {
         slot.style.backgroundColor = '#fff';
     });
 }
@@ -76,18 +65,17 @@ function clean() {
 
 /* To deal with conflicts like A and A1 */
 function slotCompare(currentc, newc) {
-    if (currentc.length != newc.length)
-        return currentc.charAt(0) === newc.charAt(0);
-    return currentc === newc;
+    return currentc.length != newc.length ? currentc.charAt(0) === newc.charAt(0) : currentc === newc;
 }
 
 
 // Replaces the slots in the timetable with the selected course in that slot
 function generate(nick) {
     clean();
-    let courseCheckBoxes = document.querySelectorAll("input:not([id='color'])");
+    let courseCheckBoxes = document.querySelectorAll("input:not(#color)");
     let occupiedSlots = [];
     let legendItems = [];
+    let slotMap = {};
 
     let h2leg = document.getElementById('h2leg');
     h2leg.classList.remove('hidden');
@@ -95,29 +83,28 @@ function generate(nick) {
 
     let addColors = document.getElementById("color").checked;
 
-    courseCheckBoxes.forEach(function (course) {
-        if (course.checked) {
-            let courseCode = course.getAttribute('id');
-            let [courseName, courseNick, courseSlot] = Object.values(courses[courseCode]);
+    for (const course of courseCheckBoxes) { // forEach doesn't stop inbetween thus multiple alerts and converted to for..of to avoid it!
+        if (!course.checked) continue;
+        let courseCode = course.id;
+        let [courseName, courseNick, courseSlot] = Object.values(courses[courseCode]);
 
-            legendItems.push([courseSlot, courseCode, courseNick, courseName]);
+        legendItems.push([courseSlot, courseCode, courseNick, courseName]);
 
-            // Conflict detection
-            for (let i = 0; i < occupiedSlots.length; ++i) {
-                if (slotCompare(occupiedSlots[i], courseSlot)) {
-                    alert("Schedule conflict detected. Course selection may need a modification.");
-                    location = location;  // Refreshes the page
-                }
-            }
-
-            occupiedSlots.push(courseSlot);
-
-            let courseSlotInTimetable = document.querySelectorAll('td.' + courseSlot);
-            courseSlotInTimetable.forEach(function (slotInTimetable) {
-                slotInTimetable.textContent = nick ? courseNick : courseCode;
-            });
+        // Conflict detection
+        for (let i = 0; i < occupiedSlots.length; ++i) {
+            if (!slotCompare(occupiedSlots[i], courseSlot)) continue;
+            alert(`Schedule conflict detected between ${slotMap[courseSlot]} and ${courseCode} at ${courseSlot}. Course selection may need a modification.`);
+            return location.reload();  // Refreshes the page
         }
-    })
+
+        occupiedSlots.push(courseSlot);
+        slotMap[courseSlot] = courseCode;
+
+        let courseSlotInTimetable = document.querySelectorAll('td.' + courseSlot);
+        courseSlotInTimetable.forEach(slotInTimetable => {
+            slotInTimetable.textContent = nick ? courseNick : courseCode;
+        });
+    }
 
     // Coloring
     if (addColors) {
@@ -131,23 +118,17 @@ function generate(nick) {
     }
 
     // Legend
-    legendItems = legendItems.sort(function (a, b) {
-        return a[0] > b[0] ? 1 : -1;
-    });
+    legendItems = legendItems.sort((a, b) => a[0] > b[0] ? 1 : -1); // may be do .sort((a, b) => a[0] - b[0])
 
     legendItems.forEach((element, i) => {
         let listItem = document.createElement("li");
         listItem.textContent = "Slot " + element[0] + ": " + element[1] + " / " + element[2] + ":  " + element[3];
-        if (addColors)
-            listItem.style.color = colors[i];
+        if (addColors) listItem.style.color = colors[i];
         document.getElementById("legend").appendChild(listItem);
     });
 
     // Preparing for PDF generation
-    occupiedSlotsGlob = [];
-    legendItems.forEach(item => {
-        occupiedSlotsGlob.push(nick ? item[2] : item[1]);
-    });
+    occupiedSlotsGlob = legendItems.map(item => nick ? item[2] : item[1]);
 
     occupiedSlots = [];
     legendItems = [];
@@ -183,14 +164,10 @@ function generatePdf() {
         // Coloring in PDF
         didParseCell(data) {
             let addColors = document.getElementById("color").checked;
-            if (addColors) {
-                // Zips two arrays of differing lengths with the final array of arrays having the length of the smaller array
-                const zip = (a, b) => Array(Math.min(b.length, a.length)).fill().map((_, i) => [a[i], b[i]]);
-                // Creates a Course-Color dictionary
-                let zippedDict = Object.fromEntries(zip(occupiedSlotsGlob, colors));
-                // Paints cells
-                if (!notPainted.includes(data.cell.text[0]))
-                    data.cell.styles.fillColor = zippedDict[data.cell.text[0]];
+            if (addColors && !notPainted.includes(data.cell.text[0])) {
+                const indexOfColor = occupiedSlotsGlob.indexOf(data.cell.text[0]);
+                if (indexOfColor !== -1 && indexOfColor < colors.length)
+                    data.cell.styles.fillColor = colors[indexOfColor];
             }
         }
     });
@@ -245,10 +222,9 @@ function generateICS() {
         let [courseName, courseNick, courseSlot] = Object.values(courses[courseCode]);
         console.log(`courseName=${courseName},\ncourseNick=${courseNick},\ncourseSlot=${courseSlot},\ncourseCode=${courseCode}`);
 
-            let subject = `${courseCode}: ${courseName}`;
-            let description = `Class for ${courseNick} at slot ${courseSlot}`;
-        slots[courseSlot].forEach(slot => {
-            let [day, start, end] = slot;
+        let subject = `${courseCode}: ${courseName}`;
+        let description = `Class for ${courseNick} at slot ${courseSlot}`;
+        slots[courseSlot].forEach(([day, start, end]) => {
             // console.log(day, start, end);
             let begin = formatted_time_string(day, start);
             let finish = formatted_time_string(day, end);
@@ -261,19 +237,8 @@ function generateICS() {
 
 }
 
-let generateCodeButton = document.querySelector('button#gen-code');
-generateCodeButton.addEventListener('click', function () { generate(false) });
-
-let generateNickButton = document.querySelector('button#gen-nick');
-generateNickButton.addEventListener('click', function () { generate(true) });
-
-let pdfButton = document.querySelector('button#pdf');
-pdfButton.onclick = generatePdf;
-
-let icsButton = document.querySelector('button#ics');
-icsButton.onclick = generateICS;
-
-let resetButton = document.querySelector('button#reset');
-resetButton.onclick = function () {
-    location = location;
-}
+document.getElementById('gen-code').onclick = () => generate(false);
+document.getElementById('gen-nick').onclick = () => generate(true);
+document.getElementById('pdf').onclick = generatePdf;
+document.getElementById('ics').onclick = generateICS;
+document.getElementById('reset').onclick = () => location.reload(); 
