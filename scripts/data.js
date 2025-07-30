@@ -74,9 +74,9 @@ let courses = {
     'CS456': new Course('Computational Geometry (M2)', 'CompGeo', 'K'),
 
     // --- Humanities ---
-    'H225': new Course('Introduction to Psychology (LH5)', 'Psych', 'K'),
-    'H238': new Course('Life in Urban World (LH5)', 'Urban', 'J'),
-    'H205': new Course('Environmental Economics (LH5)', 'EnvEcon', 'K'),
+    'H225': new Course('Introduction to Psychology (LH5)', 'Psych', 'K2'),
+    'H238': new Course('Life in Urban World (LH5)', 'Urban', 'J1'),
+    'H205': new Course('Environmental Economics (LH5)', 'EnvEcon', 'K1'),
 
     // --- Mathematics ---
     'M201': new Course('Real Analysis (M5)', 'Real', 'C'),
