@@ -86,7 +86,7 @@ let courses = {
 
     'M302': new Course('Rings and Modules (M5)', 'R&M', 'D'),
     'M303': new Course('Differential Equations (M3)', 'DE', 'J'),
-    'M305': new Course('Number Theory (M3)', 'NT2', 'B'),
+    'M305': new Course('Number Theory (M3)', 'NT', 'B'),
     'M306': new Course('Calc. of Several Vars. (M4)', 'CSV', 'F'),
     
     'M401': new Course('Functional Analysis (M5)', 'Fun Anal', 'G'),
