@@ -148,7 +148,7 @@ function generatePdf() {
     ];
 
     let centerX = doc.internal.pageSize.getWidth() / 2;
-    doc.text('Timetable for Spring Semester 2025', centerX, 25, { align: 'center' });
+    doc.text('Timetable for Fall Semester 2025', centerX, 25, { align: 'center' });
     doc.autoTable({
         html: 'table',
         theme: 'plain',
@@ -177,7 +177,7 @@ function generatePdf() {
     doc.text('Legend', 40, finalY);
     doc.html(document.getElementById('legend'), {
         callback: function (doc) {
-            doc.save("timetable_spring25.pdf");
+            doc.save("timetable_fall25.pdf");
         },
         x: 40,
         y: finalY + 7,
