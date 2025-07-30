@@ -95,7 +95,7 @@ let courses = {
     'M478': new Course('Adv PDEs (M2)', 'APDE', 'B'),
     'M455': new Course('Intro to Stochastic Processes (M4)', 'ISP', 'B'),
     'M484': new Course('Commutative Algebra (M5)', 'CA', 'B'),
-    'M555': new Course('Harmonic Analysis (M1)', 'Harmonic', 'B'),
+    'M555': new Course('Harmonic Analysis (M1)', 'Harmonic', 'I'),
     'M561': new Course('Elliptic Curves (M4)', 'Elliptic', 'A'),
     'M463': new Course('Finite Fields (M5)', 'FiniteFields', 'I'),
 
