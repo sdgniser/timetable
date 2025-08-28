@@ -106,7 +106,7 @@ let courses = {
     'P241': new Course('Electronics - Theory + Laboratory (CL-107)', 'Electronics', 'C'),
 
     'P302': new Course('Statistical Mechanics (LH5)', 'StatMech', 'D'),
-    'P303': new Course('Quantum Mechanics II (CL-127)', 'QM2', 'E'),
+    'P303': new Course('Quantum Mechanics II (CL-127)', 'QM2', 'A'),
     'P304': new Course('Special Relativity (LH5)', 'STR', 'B'),
 
 
