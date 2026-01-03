@@ -1,4 +1,4 @@
-let year = '2024';
+let year = '2025';
 let semester = 'Fall';
 
 function School(code, name, courses) {
@@ -44,12 +44,12 @@ let courses = {
     'B406': new Course('Introductory Biophysics (LH3)', 'Biophys', 'C'),
     'B451': new Course('Advanced Cell Biology (B1)', 'Adv CellBio', 'D'),
     'B455': new Course('Enzymology (B5)', 'Enzymo', 'C'),
-    'B466': new Course('Model organisms in Biomedical Research (B5)','BioMed','B'),
+    'B466': new Course('Model organisms in Biomedical Research (B5)', 'BioMed', 'B'),
     // 'B465': new Course('Structural Biology (B5)', 'StrBio', 'B'),
 
-    'B551': new Course('Advanced Molecular Biology (B3)', 'Adv MolBio', 'D'), 
-    'B552': new Course('Advanced Immunology (B4)', 'Adv Immuno', 'A'), 
-    'B555': new Course('Advanced Genetics (B6)', 'Adv Genetics', 'B'), 
+    'B551': new Course('Advanced Molecular Biology (B3)', 'Adv MolBio', 'D'),
+    'B552': new Course('Advanced Immunology (B4)', 'Adv Immuno', 'A'),
+    'B555': new Course('Advanced Genetics (B6)', 'Adv Genetics', 'B'),
 
     /* Chemistry */
     'C201': new Course('Basic Inorganic Chemistry (C6)', 'Inorganic', 'D'),
@@ -122,7 +122,7 @@ let courses = {
 
     'P401': new Course('Classical Mechanics II: Mechanics of Continuous Media (P107)', 'CM2', 'F'),
     'P405': new Course('Atoms, molecules and Radiation (P107)', 'AMR', 'E'),
-    
+
     'P453': new Course('Quantum Field Theory I (P107)', 'QFT1', 'C'),
     // 'P451': new Course('Advanced Solid State Physics (P107)', 'ASS', 'B'),
     // 'P462': new Course('Introduction to Quantum Optics (P108)', 'IQO', 'C'),
