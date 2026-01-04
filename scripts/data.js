@@ -78,6 +78,16 @@ let courses = {
     'CS457': new Course('Parameterized Algorithms (M3)', 'ParamAlgo', 'J'),
     'CS453': new Course('Complexity Theory (M2)', 'CT', 'K'),
     //'CS458': new Course('Secure Multiparty Computation (M4)', 'SMC', 'A'),
+    'CSE661': new Course('Advanced Machine Learning (M1)', 'AdvML', 'C'),
+    'CSE628':new Course('Advanced Data Structure(SPS-108)','AdvDataStr','A'),
+    'CSE625':new Course('Randomized Algorithms(M1)','RandAlgo','B'),
+    'CSE621':new Course('Parametrized Algorithms(M3)','ParaAlgo','J'),
+    'CSE631':new Course('Complexity Theory(M2)','CT','K'),
+    'CSE700':new Course('Research Methodology and Research Publication Ethics (RM/RPE)(M1)','ResEthics','D'),
+
+    'CSE651':new Course('Introduction to Computational Number Theory(M1)','CompNT','E'),
+    'CSE691':new Course('Seminar Course-I(M1)','Seminar','F'),
+
 
     // Mathematics
     'MAT202': new Course('Group Theory (M2)', 'Group-Theory', 'B'),

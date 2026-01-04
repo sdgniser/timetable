@@ -75,8 +75,16 @@ let courses = {
     'CS452': new Course('Algorithmic Coding Theory (M4)', 'AlgoCode', 'B'),
     'CS425': new Course('Randomized Algorithms (M5)', 'RA', 'K'),
     'CS453': new Course('Compexity Theory (M5)', 'CompTheory', 'A'),
-    // 'CS461': new Course('Advanced Machine Learning (M5)', 'AdvML', 'J'),
+    'CSE661': new Course('Advanced Machine Learning (M1)', 'AdvML', 'C'),
     // 'CS452': new Course('Algorithmic Coding Theory (M5)', 'ACT', 'K'),
+    'CSE628':new Course('Advanced Data Structure(SPS-108)','AdvDataStr','A'),
+    'CSE625':new Course('Randomized Algorithms(M1)','RandAlgo','B'),
+    'CSE621':new Course('Parametrized Algorithms(M3)','ParaAlgo','J'),
+    'CSE631':new Course('Complexity Theory(M2)','CT','K'),
+    'CSE700':new Course('Research Methodology and Research Publication Ethics (RM/RPE)(M1)','ResEthics','D'),
+
+    'CSE651':new Course('Introduction to Computational Number Theory(M1)','CompNT','E'),
+    'CSE691':new Course('Seminar Course-I(M1)','Seminar','F'),
 
     /* Humanities */
     'H209': new Course('Speculative Fiction (LH5)', 'Spec Fiction', 'K1'),
