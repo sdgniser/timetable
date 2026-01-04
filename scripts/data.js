@@ -25,6 +25,7 @@ let schools = {
     'SCPS': new School(['CS', 'CSE'], 'School of Computer Sciences', []),
     'SHSS': new School(['H', 'HSS'], 'School of Humanities and Social Sciences', []),
     'CMRP': new School(['R', 'MRP'], 'Center for Medical and Radiation Physics', []),
+    'SEPS':new School(['EP','EPS'],'School of Earth and Planetary Sciences',[]),
 };
 
 let courses = {
@@ -77,6 +78,16 @@ let courses = {
     'CS457': new Course('Parameterized Algorithms (M3)', 'ParamAlgo', 'J'),
     'CS453': new Course('Complexity Theory (M2)', 'CT', 'K'),
     //'CS458': new Course('Secure Multiparty Computation (M4)', 'SMC', 'A'),
+    'CSE661': new Course('Advanced Machine Learning (M1)', 'AdvML', 'C'),
+    'CSE628':new Course('Advanced Data Structure(SPS-108)','AdvDataStr','A'),
+    'CSE625':new Course('Randomized Algorithms(M1)','RandAlgo','B'),
+    'CSE621':new Course('Parametrized Algorithms(M3)','ParaAlgo','J'),
+    'CSE631':new Course('Complexity Theory(M2)','CT','K'),
+    'CSE700':new Course('Research Methodology and Research Publication Ethics (RM/RPE)(M1)','ResEthics','D'),
+
+    'CSE651':new Course('Introduction to Computational Number Theory(M1)','CompNT','E'),
+    'CSE691':new Course('Seminar Course-I(M1)','Seminar','F'),
+
 
     // Mathematics
     'MAT202': new Course('Group Theory (M2)', 'Group-Theory', 'B'),
@@ -130,6 +141,14 @@ let courses = {
     'HSS237': new Course('Science Communication and Citizenship (LH5)', 'SciComm', 'K1'),
     'HSS210': new Course('The City in Modern Fiction (LH5)', 'ModFiction', 'J2'),
     'HSS209': new Course('Speculative Fiction (LH5)', 'SpecFiction', 'J1'),
+
+    /* Earth and Planetary Sciences*/
+    'EP206': new Course('Fundamentals of Astronomy and Space Sciences(LH3)','AstroSpace','J'),
+    'EPS670': new Course('Atmospheric Thermodynamics and Convention(SEPS)','ATC','D'),
+    'EPS655': new Course('Geophysics(SEPS)','GeoPhy','B'),
+    'EPS684': new Course('Planetary Atmosphere and Space Weather(SEPS)','PASW','A'),
+    'EPS603':new Course('Planetary Sciences(SEPS)','P-Sci','C'),
+    'EPS601': new Course('Earth Sciences(SEPS)','ES','E'),
 
 };  //k1,J1->Monday and wednesday. k2,J2 -> for Tuesday and Thursday. 
 
