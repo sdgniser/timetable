@@ -3,6 +3,9 @@ let schoolList = document.getElementById('school-list');
 
 let occupiedSlotsGlob = [];
 
+const SEMESTER_NAME = "Spring Semester 2026";
+const FILE_NAME = "timetable_spring26.pdf";
+
 /* Generating the DOM tree containing the schools
  * and the list of courses */
 for (let school in schools) {
@@ -44,7 +47,7 @@ for (let school in schools) {
         courseCheckBox.type = 'checkbox';
         courseCheckBox.id = courseCheckBox.value = course;
 
-        
+
         schoolUl.appendChild(courseLi);
         courseLi.append(courseCheckBox, courseLabel);
     });
@@ -55,7 +58,7 @@ for (let school in schools) {
 function clean() {
     let slotsInTimetable = document.querySelectorAll('td:not(.lunch)');
     document.getElementById("legend").textContent = "";// Cleans legend
-    
+
     slotsInTimetable.forEach(slot => {// Removes colors from cells
         slot.textContent = '';
         slot.style.backgroundColor = '#fff';
@@ -87,23 +90,34 @@ function generate(nick) {
         if (!course.checked) continue;
         let courseCode = course.id;
         let [courseName, courseNick, courseSlot] = Object.values(courses[courseCode]);
+        let slotsArr = Array.isArray(courseSlot) ? courseSlot : [courseSlot];
 
-        legendItems.push([courseSlot, courseCode, courseNick, courseName]);
+
+        legendItems.push([slotsArr.join(','), courseCode, courseNick, courseName]);
+
 
         // Conflict detection
-        for (let i = 0; i < occupiedSlots.length; ++i) {
-            if (!slotCompare(occupiedSlots[i], courseSlot)) continue;
-            alert(`Schedule conflict detected between ${slotMap[courseSlot]} and ${courseCode} at ${courseSlot}. Course selection may need a modification.`);
-            return location.reload();  // Refreshes the page
+
+        for (const newSlot of slotsArr) {
+
+            for (let i = 0; i < occupiedSlots.length; ++i) {
+                if (!slotCompare(occupiedSlots[i], newSlot)) continue;
+
+                alert(`Schedule conflict detected between ${slotMap[newSlot]} and ${courseCode} at ${newSlot}. Course selection may need a modification.`);
+                return location.reload();
+            }
+
+            occupiedSlots.push(newSlot);
+            slotMap[newSlot] = courseCode;
+
+            let courseSlotInTimetable = document.querySelectorAll('td.' + newSlot);
+            courseSlotInTimetable.forEach(slotInTimetable => {
+                slotInTimetable.textContent = nick ? courseNick : courseCode;
+            });
         }
 
-        occupiedSlots.push(courseSlot);
-        slotMap[courseSlot] = courseCode;
 
-        let courseSlotInTimetable = document.querySelectorAll('td.' + courseSlot);
-        courseSlotInTimetable.forEach(slotInTimetable => {
-            slotInTimetable.textContent = nick ? courseNick : courseCode;
-        });
+
     }
 
     // Coloring
@@ -127,12 +141,11 @@ function generate(nick) {
         document.getElementById("legend").appendChild(listItem);
     });
 
+
     // Preparing for PDF generation
     occupiedSlotsGlob = legendItems.map(item => nick ? item[2] : item[1]);
-
-    occupiedSlots = [];
-    legendItems = [];
 }
+
 
 function generatePdf() {
     let doc = new jspdf.jsPDF({
@@ -148,7 +161,7 @@ function generatePdf() {
     ];
 
     let centerX = doc.internal.pageSize.getWidth() / 2;
-    doc.text('Timetable for Fall Semester 2025', centerX, 25, { align: 'center' });
+    doc.text(`Timetable for ${SEMESTER_NAME}`, centerX, 25, { align: 'center' });
     doc.autoTable({
         html: 'table',
         theme: 'plain',
@@ -177,7 +190,7 @@ function generatePdf() {
     doc.text('Legend', 40, finalY);
     doc.html(document.getElementById('legend'), {
         callback: function (doc) {
-            doc.save("timetable_fall25.pdf");
+            doc.save(FILE_NAME);
         },
         x: 40,
         y: finalY + 7,
@@ -220,17 +233,21 @@ function generateICS() {
 
     occupiedSlotsGlob.forEach(courseCode => {
         let [courseName, courseNick, courseSlot] = Object.values(courses[courseCode]);
+        let slotsArr = Array.isArray(courseSlot) ? courseSlot : [courseSlot];
+
         console.log(`courseName=${courseName},\ncourseNick=${courseNick},\ncourseSlot=${courseSlot},\ncourseCode=${courseCode}`);
 
         let subject = `${courseCode}: ${courseName}`;
         let description = `Class for ${courseNick} at slot ${courseSlot}`;
-        slots[courseSlot].forEach(([day, start, end]) => {
-            // console.log(day, start, end);
-            let begin = formatted_time_string(day, start);
-            let finish = formatted_time_string(day, end);
+        slotsArr.forEach(slot => {
+            slots[slot].forEach(([day, start, end]) => {
+                let begin = formatted_time_string(day, start);
+                let finish = formatted_time_string(day, end);
 
-            cal.addEvent(subject, description, location, begin, finish, rrule);
+                cal.addEvent(subject, description, location, begin, finish, rrule);
+            });
         });
+
     })
 
     cal.download("timetable");
