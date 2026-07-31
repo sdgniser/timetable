@@ -22,7 +22,7 @@ let schools = {
     'SBS': new School(['BIO', 'B'], 'School of Biological Sciences', []),
     'SPS': new School(['P', 'PHY'], 'School of Physical Sciences', []),
     'SMS': new School(['M', 'MAT'], 'School of Mathematical Sciences', []),
-    'SCPS': new School(['CS', 'CSE'], 'School of Computer Sciences', []),
+    'SCoS': new School(['CS', 'CSE'], 'School of Computer Sciences', []),
     'SHSS': new School(['H', 'HSS'], 'School of Humanities and Social Sciences', []),
     'CMRP': new School(['R', 'MRP'], 'Center for Medical and Radiation Physics', []),
     'SEPS':new School(['EP','EPS'],'School of Earth and Planetary Sciences',[]),
@@ -230,6 +230,22 @@ let courses = {
     'PHY806': new Course('Condensed Matter Physics (CL-109)', 'CMP', 'E'),
     'PHY807': new Course('Particle Physics (CL-127)', 'ParticlePhy', 'G'),
     'PHY808': new Course('Astrophysics and Cosmology (CL-109)', 'AstroCosmo', 'H'),
+
+    /* Centre for Medical and Radiation Physics */
+
+    'MPH511': new Course('Applied Mathematical Physics (CL-001)', 'AppMathPhys', 'A'),
+    'MPH512': new Course('Electrodynamics and Quantum Mechanics (CL-001)', 'EDQM', 'F'),
+    'MPH513': new Course('Medical Electronics and Instrumentation (CL-001)', 'MedElectronics', 'C'),
+    'MPH514': new Course('Anatomy, Physiology, Tumor Pathology and Genetics (CL-001)', 'AnatPhysTumor', 'D'),
+    'MPH515': new Course('Solid State Physics and Radiation Detectors (CL-001)', 'SolidState', 'B'),
+    'MPH516': new Course('Programming, Data Science, and Computational Methods for Medical Physics (CL-001)', 'MedComp', 'G'),
+    'MPH518': new Course('Electronics and Radiation Instrumentation Lab (TL-001/TL-002)', 'RadInstrLab', 'G-I'),
+
+    'MRP611': new Course('Radiation Physics & Radiation Generators (CL-002)', 'RadPhysics', 'A'),
+    'MRP612': new Course('Radiological Mathematics (CL-002)', 'RadMath', 'B'),
+    'MRP613': new Course('Radiation Dosimetry and Standardization (CL-002)', 'Dosimetry', 'C'),
+    'MRP614': new Course('Radiation Detectors and Instrumentation (CL-002)', 'RadDetectors', 'D'),
+    'MRP615': new Course('Medical Physics Laboratory-I (TL-101)', 'MedPhysLab', 'F-I'),
 
 };  //k1,J1->Monday and wednesday. k2,J2 -> for Tuesday and Thursday. 
 
