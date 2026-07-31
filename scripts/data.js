@@ -24,7 +24,7 @@ let schools = {
     'SMS': new School(['M', 'MAT'], 'School of Mathematical Sciences', []),
     'SCoS': new School(['CS', 'CSE'], 'School of Computer Sciences', []),
     'SHSS': new School(['H', 'HSS'], 'School of Humanities and Social Sciences', []),
-    'CMRP': new School(['R', 'MRP'], 'Center for Medical and Radiation Physics', []),
+    'CMRP': new School(['MPH', 'MRP'], 'Center for Medical and Radiation Physics', []),
     'SEPS':new School(['EP','EPS'],'School of Earth and Planetary Sciences',[]),
 };
 
